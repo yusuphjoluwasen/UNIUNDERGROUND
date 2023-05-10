@@ -31,6 +31,8 @@
 		09185D5E2A0BE00C0034280A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D5D2A0BE00C0034280A /* FirebaseFirestore */; };
 		09185D602A0BE00C0034280A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D5F2A0BE00C0034280A /* FirebaseFirestoreSwift */; };
 		09185D622A0BE00C0034280A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D612A0BE00C0034280A /* FirebaseStorage */; };
+		E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2EE2A0C33990007B9BB /* HomeTab.swift */; };
+		E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		09185D382A0B3E710034280A /* UniUndergroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundUITests.swift; sourceTree = "<group>"; };
 		09185D3A2A0B3E710034280A /* UniUndergroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		09185D632A0BE5CB0034280A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E48AA2EE2A0C33990007B9BB /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		09185D112A0B3E700034280A = {
 			isa = PBXGroup;
 			children = (
+				E48AA2ED2A0C337A0007B9BB /* Home */,
 				09185D1C2A0B3E700034280A /* UniUnderground */,
 				09185D2D2A0B3E710034280A /* UniUndergroundTests */,
 				09185D372A0B3E710034280A /* UniUndergroundUITests */,
@@ -159,6 +164,7 @@
 		09185D1C2A0B3E700034280A /* UniUnderground */ = {
 			isa = PBXGroup;
 			children = (
+				E48AA2EC2A0C32F00007B9BB /* ConfessionsPage */,
 				0912611C2A0C044C007095F2 /* SelectSchool */,
 				091261192A0C0383007095F2 /* Font */,
 				091261162A0BE8B9007095F2 /* Login */,
@@ -194,6 +200,22 @@
 				09185D3A2A0B3E710034280A /* UniUndergroundUITestsLaunchTests.swift */,
 			);
 			path = UniUndergroundUITests;
+			sourceTree = "<group>";
+		};
+		E48AA2EC2A0C32F00007B9BB /* ConfessionsPage */ = {
+			isa = PBXGroup;
+			children = (
+				E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */,
+			);
+			path = ConfessionsPage;
+			sourceTree = "<group>";
+		};
+		E48AA2ED2A0C337A0007B9BB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E48AA2EE2A0C33990007B9BB /* HomeTab.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,8 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
+				E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
 				09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */,
 				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
