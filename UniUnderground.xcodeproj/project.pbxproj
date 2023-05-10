@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		091261182A0BE8CA007095F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091261172A0BE8CA007095F2 /* LoginView.swift */; };
+		0912611B2A0C03A9007095F2 /* Kavoon-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0912611A2A0C03A9007095F2 /* Kavoon-Regular.ttf */; };
+		0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912611D2A0C0466007095F2 /* SelectSchools.swift */; };
+		091261202A0C0765007095F2 /* InriaSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0912611F2A0C0765007095F2 /* InriaSerif-Regular.ttf */; };
+		091261252A0C088B007095F2 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 091261212A0C088B007095F2 /* Inter-Regular.ttf */; };
+		091261262A0C088B007095F2 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 091261222A0C088B007095F2 /* Inter-SemiBold.ttf */; };
+		091261272A0C088B007095F2 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 091261232A0C088B007095F2 /* Inter-Bold.ttf */; };
+		091261282A0C088B007095F2 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 091261242A0C088B007095F2 /* Inter-Medium.ttf */; };
+		0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091261292A0C1DB0007095F2 /* NewIView.swift */; };
 		09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09185D1D2A0B3E700034280A /* UniUndergroundApp.swift */; };
 		09185D202A0B3E700034280A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09185D1F2A0B3E700034280A /* ContentView.swift */; };
 		09185D222A0B3E710034280A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09185D212A0B3E710034280A /* Assets.xcassets */; };
@@ -44,6 +52,14 @@
 
 /* Begin PBXFileReference section */
 		091261172A0BE8CA007095F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0912611A2A0C03A9007095F2 /* Kavoon-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kavoon-Regular.ttf"; sourceTree = "<group>"; };
+		0912611D2A0C0466007095F2 /* SelectSchools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSchools.swift; sourceTree = "<group>"; };
+		0912611F2A0C0765007095F2 /* InriaSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InriaSerif-Regular.ttf"; sourceTree = "<group>"; };
+		091261212A0C088B007095F2 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		091261222A0C088B007095F2 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		091261232A0C088B007095F2 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		091261242A0C088B007095F2 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		091261292A0C1DB0007095F2 /* NewIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIView.swift; sourceTree = "<group>"; };
 		09185D1A2A0B3E700034280A /* UniUnderground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniUnderground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09185D1D2A0B3E700034280A /* UniUndergroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundApp.swift; sourceTree = "<group>"; };
 		09185D1F2A0B3E700034280A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +114,28 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		091261192A0C0383007095F2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0912611F2A0C0765007095F2 /* InriaSerif-Regular.ttf */,
+				091261232A0C088B007095F2 /* Inter-Bold.ttf */,
+				091261242A0C088B007095F2 /* Inter-Medium.ttf */,
+				091261212A0C088B007095F2 /* Inter-Regular.ttf */,
+				091261222A0C088B007095F2 /* Inter-SemiBold.ttf */,
+				0912611A2A0C03A9007095F2 /* Kavoon-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		0912611C2A0C044C007095F2 /* SelectSchool */ = {
+			isa = PBXGroup;
+			children = (
+				0912611D2A0C0466007095F2 /* SelectSchools.swift */,
+				091261292A0C1DB0007095F2 /* NewIView.swift */,
+			);
+			path = SelectSchool;
+			sourceTree = "<group>";
+		};
 		09185D112A0B3E700034280A = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +159,8 @@
 		09185D1C2A0B3E700034280A /* UniUnderground */ = {
 			isa = PBXGroup;
 			children = (
+				0912611C2A0C044C007095F2 /* SelectSchool */,
+				091261192A0C0383007095F2 /* Font */,
 				091261162A0BE8B9007095F2 /* Login */,
 				09185D632A0BE5CB0034280A /* Info.plist */,
 				09185D1D2A0B3E700034280A /* UniUndergroundApp.swift */,
@@ -273,7 +313,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091261262A0C088B007095F2 /* Inter-SemiBold.ttf in Resources */,
 				09185D252A0B3E710034280A /* Preview Assets.xcassets in Resources */,
+				091261252A0C088B007095F2 /* Inter-Regular.ttf in Resources */,
+				091261272A0C088B007095F2 /* Inter-Bold.ttf in Resources */,
+				091261282A0C088B007095F2 /* Inter-Medium.ttf in Resources */,
+				091261202A0C0765007095F2 /* InriaSerif-Regular.ttf in Resources */,
+				0912611B2A0C03A9007095F2 /* Kavoon-Regular.ttf in Resources */,
 				09185D222A0B3E710034280A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,8 +346,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
+				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
 				09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */,
+				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +509,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UniUnderground/Preview Content\"";
-				DEVELOPMENT_TEAM = GC375RV42S;
+				DEVELOPMENT_TEAM = FKV8TK35V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UniUnderground/Info.plist;
@@ -491,7 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UniUnderground/Preview Content\"";
-				DEVELOPMENT_TEAM = GC375RV42S;
+				DEVELOPMENT_TEAM = FKV8TK35V9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UniUnderground/Info.plist;
