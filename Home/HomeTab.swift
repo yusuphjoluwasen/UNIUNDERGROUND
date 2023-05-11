@@ -10,20 +10,26 @@ import SwiftUI
 struct HomeTab: View {
     var body: some View {
         TabView {
-            Text("hello")
-                .tabItem {
-                    Image(systemName: "car")
-                    Text("Motion")
-                }
+           
             ConfessionsPage()
                 .tabItem {
-                    Image(systemName: "flag.fill")
+                    Image(systemName: "captions.bubble.fill")
                     Text("Confessions")
                 }
             Text("hello")
                 .tabItem {
-                    Image(systemName: "flag.fill")
+                    Image(systemName: "person.3.fill")
                     Text("Community")
+                }
+            Text("hello")
+                .tabItem {
+                    Image(systemName: "car")
+                    Text("Events")
+                }
+            Text("hello")
+                .tabItem {
+                    Image(systemName: "person.fill")
+                    Text("Profile")
                 }
                 }
     }

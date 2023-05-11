@@ -33,6 +33,10 @@
 		09185D622A0BE00C0034280A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D612A0BE00C0034280A /* FirebaseStorage */; };
 		E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2EE2A0C33990007B9BB /* HomeTab.swift */; };
 		E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */; };
+		E48AA2F32A0D60830007B9BB /* ConfessionClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F22A0D60830007B9BB /* ConfessionClass.swift */; };
+		E48AA2F52A0D6E060007B9BB /* ConfessionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F42A0D6E060007B9BB /* ConfessionsList.swift */; };
+		E48AA2F72A0D70060007B9BB /* ConfessionsComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F62A0D70060007B9BB /* ConfessionsComments.swift */; };
+		E48AA2F92A0D70780007B9BB /* ConfessionsCommentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F82A0D70780007B9BB /* ConfessionsCommentClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		09185D632A0BE5CB0034280A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E48AA2EE2A0C33990007B9BB /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
 		E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsPage.swift; sourceTree = "<group>"; };
+		E48AA2F22A0D60830007B9BB /* ConfessionClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionClass.swift; sourceTree = "<group>"; };
+		E48AA2F42A0D6E060007B9BB /* ConfessionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsList.swift; sourceTree = "<group>"; };
+		E48AA2F62A0D70060007B9BB /* ConfessionsComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsComments.swift; sourceTree = "<group>"; };
+		E48AA2F82A0D70780007B9BB /* ConfessionsCommentClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsCommentClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +214,10 @@
 			isa = PBXGroup;
 			children = (
 				E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */,
+				E48AA2F22A0D60830007B9BB /* ConfessionClass.swift */,
+				E48AA2F82A0D70780007B9BB /* ConfessionsCommentClass.swift */,
+				E48AA2F42A0D6E060007B9BB /* ConfessionsList.swift */,
+				E48AA2F62A0D70060007B9BB /* ConfessionsComments.swift */,
 			);
 			path = ConfessionsPage;
 			sourceTree = "<group>";
@@ -367,11 +379,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E48AA2F52A0D6E060007B9BB /* ConfessionsList.swift in Sources */,
 				E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */,
+				E48AA2F72A0D70060007B9BB /* ConfessionsComments.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
+				E48AA2F92A0D70780007B9BB /* ConfessionsCommentClass.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
+				E48AA2F32A0D60830007B9BB /* ConfessionClass.swift in Sources */,
 				09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */,
 				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
 			);
