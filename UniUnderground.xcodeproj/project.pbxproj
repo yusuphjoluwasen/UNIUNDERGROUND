@@ -31,6 +31,14 @@
 		09185D5E2A0BE00C0034280A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D5D2A0BE00C0034280A /* FirebaseFirestore */; };
 		09185D602A0BE00C0034280A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D5F2A0BE00C0034280A /* FirebaseFirestoreSwift */; };
 		09185D622A0BE00C0034280A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D612A0BE00C0034280A /* FirebaseStorage */; };
+		B97A05C42A0C38D900A82B1F /* CommunitiesLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C32A0C38D900A82B1F /* CommunitiesLandingPage.swift */; };
+		B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */; };
+		B97A05CA2A0D210100A82B1F /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C92A0D210100A82B1F /* Communities.swift */; };
+		B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */; };
+		B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */; };
+		B97A05D12A0D33E500A82B1F /* CommunitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05D02A0D33E500A82B1F /* CommunitiesList.swift */; };
+		B97A05D52A0D69FD00A82B1F /* CommunitiesComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05D42A0D69FD00A82B1F /* CommunitiesComment.swift */; };
+		B97A05D72A0D6A4D00A82B1F /* CommunitiesCommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05D62A0D6A4D00A82B1F /* CommunitiesCommentList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +79,15 @@
 		09185D382A0B3E710034280A /* UniUndergroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundUITests.swift; sourceTree = "<group>"; };
 		09185D3A2A0B3E710034280A /* UniUndergroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		09185D632A0BE5CB0034280A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B97A05C32A0C38D900A82B1F /* CommunitiesLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesLandingPage.swift; sourceTree = "<group>"; };
+		B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesHome.swift; sourceTree = "<group>"; };
+		B97A05C92A0D210100A82B1F /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
+		B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesDetailView.swift; sourceTree = "<group>"; };
+		B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommunityView.swift; sourceTree = "<group>"; };
+		B97A05CF2A0D332800A82B1F /* Community.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Community.geojson; sourceTree = "<group>"; };
+		B97A05D02A0D33E500A82B1F /* CommunitiesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesList.swift; sourceTree = "<group>"; };
+		B97A05D42A0D69FD00A82B1F /* CommunitiesComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesComment.swift; sourceTree = "<group>"; };
+		B97A05D62A0D6A4D00A82B1F /* CommunitiesCommentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesCommentList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +176,7 @@
 		09185D1C2A0B3E700034280A /* UniUnderground */ = {
 			isa = PBXGroup;
 			children = (
+				B97A05C72A0D200E00A82B1F /* Communites */,
 				0912611C2A0C044C007095F2 /* SelectSchool */,
 				091261192A0C0383007095F2 /* Font */,
 				091261162A0BE8B9007095F2 /* Login */,
@@ -194,6 +212,38 @@
 				09185D3A2A0B3E710034280A /* UniUndergroundUITestsLaunchTests.swift */,
 			);
 			path = UniUndergroundUITests;
+			sourceTree = "<group>";
+		};
+		B97A05C22A0C38A300A82B1F /* Communities View Page */ = {
+			isa = PBXGroup;
+			children = (
+				B97A05C32A0C38D900A82B1F /* CommunitiesLandingPage.swift */,
+				B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */,
+				B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */,
+				B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */,
+			);
+			path = "Communities View Page";
+			sourceTree = "<group>";
+		};
+		B97A05C72A0D200E00A82B1F /* Communites */ = {
+			isa = PBXGroup;
+			children = (
+				B97A05C82A0D20DC00A82B1F /* Model */,
+				B97A05C22A0C38A300A82B1F /* Communities View Page */,
+			);
+			path = Communites;
+			sourceTree = "<group>";
+		};
+		B97A05C82A0D20DC00A82B1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B97A05CF2A0D332800A82B1F /* Community.geojson */,
+				B97A05C92A0D210100A82B1F /* Communities.swift */,
+				B97A05D02A0D33E500A82B1F /* CommunitiesList.swift */,
+				B97A05D42A0D69FD00A82B1F /* CommunitiesComment.swift */,
+				B97A05D62A0D6A4D00A82B1F /* CommunitiesCommentList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,11 +395,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97A05D72A0D6A4D00A82B1F /* CommunitiesCommentList.swift in Sources */,
+				B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */,
+				B97A05CA2A0D210100A82B1F /* Communities.swift in Sources */,
+				B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
 				09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */,
+				B97A05D52A0D69FD00A82B1F /* CommunitiesComment.swift in Sources */,
+				B97A05C42A0C38D900A82B1F /* CommunitiesLandingPage.swift in Sources */,
+				B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */,
 				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
+				B97A05D12A0D33E500A82B1F /* CommunitiesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
