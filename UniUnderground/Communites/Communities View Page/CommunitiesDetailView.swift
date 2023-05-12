@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct CommunitiesDetailView: View {
-    @EnvironmentObject var communitiesList: CommunitiesList
-    let community: Communities
+    var community: Community?
     @State private var newComment: String = ""
+    @ObservedObject var viewModel:CommunitiesViewModel = CommunitiesViewModel()
 
     var body: some View {
         VStack {
-//            Text(community.description)
-//                .font(.subheadline)
+            Text(community?.groupname ?? "")
+                .font(.subheadline)
 
             List {
-                ForEach(communitiesList.comments, id: \.self) { comment in
-                    Text(comment)
+                ForEach(viewModel.messages) { chat in
+                    Text(chat.text)
                 }
             }
             .listStyle(InsetListStyle())
@@ -32,8 +32,8 @@ struct CommunitiesDetailView: View {
                         .cornerRadius(8)
 
                     Button(action: {
-                        communitiesList.addComment(comment: newComment)
-                        newComment = ""
+                        addMessage()
+                        
                     }, label: {
                         Image(systemName: "arrow.up.circle.fill")
                             .font(.title2)
@@ -41,15 +41,17 @@ struct CommunitiesDetailView: View {
                     })
                 }
                 .padding(.horizontal)
-//                .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
                 .background(Color.white)
             }
         }
-        .navigationTitle(community.name)
         .onAppear {
-            // Load comments from user defaults when the view appears
-            communitiesList.loadCommentsFromUserDefaults()
+            viewModel.fetchCommunityMessages(communityid: community?.id ?? "")
         }
+    }
+    
+    func addMessage(){
+        viewModel.addToCommunityMessages(text: newComment, communityid: community?.id ?? "")
+        newComment = ""
     }
 }
 
@@ -58,7 +60,7 @@ struct CommunitiesDetailView: View {
 
 struct CommunitiesDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CommunitiesDetailView(community: Communities(name: "Community 1", imageName: "", description: "A group for students")).environmentObject(CommunitiesList())
+        CommunitiesDetailView(community:Community(groupname: "group", grouplogo: "logo", description: "description", user: "user"))
     }
 }
 

@@ -8,44 +8,56 @@
 import SwiftUI
 
 struct CommunitiesHome: View {
-    var communities: [Communities]
-    @State private var isPresentingAddPizzaModal = false
-    @State private var newCommunity = Communities(name: "",  imageName: "", description: "")
-
+    @ObservedObject var viewModel:CommunitiesViewModel = CommunitiesViewModel()
+    @State private var isPresenting = false
     var body: some View {
-        NavigationView{
-            List(communities) { community in
-                NavigationLink(destination: CommunitiesDetailView(community: community)) {
-                    HStack {
-                        Image(community.imageName)
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                        Text(community.name)
+        NavigationStack{
+            ZStack{
+                List(viewModel.communities) { community in
+                    NavigationLink(destination: CommunitiesDetailView(community: community)) {
+                        HStack {
+                            AsyncImage(url: URL(string: community.grouplogo)) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                            } placeholder: {
+                                Color.gray.opacity(0.1)
+                            }
+                            .frame(width: 40, height: 40)
+                            .cornerRadius(20)
+                            Text(community.groupname)
+                        }
                     }
+                }
+                
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        Button(action: {
+                            isPresenting = true
+                        }){
+                            Image(systemName: "plus.circle.fill")
+                        }
+                    }
+                    .padding(.horizontal)
                 }
             }
             .navigationTitle("Communities")
-            .toolbar{
-                ToolbarItem(placement: .bottomBar){
-                    Button(action: {
-                        isPresentingAddPizzaModal = true
-                    }){
-                        Image(systemName: "plus.circle.fill")
-                    }
-                }
-            }.sheet(isPresented: $isPresentingAddPizzaModal) {
-                AddCommunityView(community: $newCommunity, isPresented: $isPresentingAddPizzaModal)
-//                    .environmentObject(CommunitiesList())
+            .onAppear{
+                viewModel.fetchCommunities()
             }
+            .navigationDestination(isPresented: $isPresenting, destination: {
+                AddCommunityView()
+            })
+            
         }
     }
 }
 
 struct CommunitiesHome_Previews: PreviewProvider {
     static var previews: some View {
-        CommunitiesHome(communities: [
-            Communities(name: "Baker's Society", imageName: "", description: "We love baking, and hope you do!"),
-            ])
+        CommunitiesHome()
     }
 }
 

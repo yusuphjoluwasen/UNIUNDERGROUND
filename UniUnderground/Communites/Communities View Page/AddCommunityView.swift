@@ -8,52 +8,78 @@
 import SwiftUI
 
 struct AddCommunityView: View {
-    @Environment(\.presentationMode) private var presentationMode
-    @EnvironmentObject var communitiesList: CommunitiesList
-    @Binding var community: Communities
-    @Binding var isPresented: Bool
-
+    @State var name: String = ""
+    @State var description: String = ""
+    @State var image: UIImage?
+    @State var shouldShowImagePicker = false
+    @State var status = ""
+    @ObservedObject var viewModel:CommunitiesViewModel = CommunitiesViewModel()
+    
     var body: some View {
-        NavigationView {
-            Form {
-                
-                
-                Section(header: Text("Title")) {
-                    TextField("Community Name", text: $community.name)
-                }
-                //change to icon
-                Section(header: Text("ImageName")) {
-                    TextField("Image Name of the Picture", text: $community.imageName)
-                }
-                Section(header: Text("Description")) {
-                    TextField("Brief description of the group", text: $community.description)
-                }
-                Section{
-                    Button(action: {
-                        communitiesList.communities.append(community)
-                        presentationMode.wrappedValue.dismiss()
-                        communitiesList.saveCommunitiesToUserDefaults()
-                        // Handle adding the new community here
-                    }){
-                        Text("Create Community")
+        ScrollView{
+            VStack{
+                Button(action: {
+                    shouldShowImagePicker.toggle()
+                }){
+                    VStack{
+                        if let image = self.image {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 128, height: 128)
+                                .cornerRadius(64)
+                        } else {
+                            Image(systemName: "person.fill")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                        }
                     }
-                    .disabled(community.name.isEmpty || community.imageName.isEmpty || community.description.isEmpty)
+                }
+                .padding(.vertical)
+            
+                TextField("Community Name", text: $name)
+                    .border(Color.black)
+               
+                TextField("Brief description of the group", text: $description)
+                    .border(Color.black)
+                
+                Button(action: {
+                    viewModel.createCommunity(image: image ?? UIImage(), name: name, description: description)
+                    
+                }){
+                    Text("Create Community")
+                }
+                .disabled(name.isEmpty || description.isEmpty)
+                
+                Text(status)
+                    .padding(.top)
+            }
+            .padding(.horizontal)
+            .onChange(of: viewModel.createNewCommunityStatus) { value in
+                if value{
+                   status = "Created Successfully"
                 }
             }
-            //.navigationTitle("Add Community")
-            .navigationBarTitle(Text("Add Community"), displayMode: .inline)
-            .autocapitalization(.none)
-            .navigationBarItems(leading: Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("Cancel")
-            })
+            .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
+                ImagePicker(image: $image)
+                    .ignoresSafeArea()
+            }
         }
     }
 }
-//
-//struct AddCommunityView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddCommunityView()
-//    }
-//}
+
+struct AddCommunityView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddCommunityView()
+    }
+}
+
+
+
+//    .navigationBarTitle(Text("Add Community"), displayMode: .inline)
+//    //            .autocapitalization(.none)
+//    .navigationBarItems(leading: Button(action: {
+//        presentationMode.wrappedValue.dismiss()
+//    }) {
+//        Text("Cancel")
+//    })

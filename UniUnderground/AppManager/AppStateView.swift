@@ -12,7 +12,7 @@ struct AppStateView: View {
     
     var body: some View {
         if (vm.isLoggedIn) {
-            ProfileView()
+            HomeTab()
         } else {
             SelectSchool()
         }
