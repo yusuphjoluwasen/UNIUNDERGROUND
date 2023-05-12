@@ -51,17 +51,25 @@ struct LoginView: View {
                         if !isLoginMode{
                             TextField("First Name", text: $firstname)
                                 .keyboardType(.emailAddress)
-                                .autocapitalization(.none)
+                                .autocapitalization(.none).placeholder(when: firstname.isEmpty) {
+                                    Text("First Name").foregroundColor(.gray)
+                                }
                             
                             TextField("Last Name", text: $lastname)
                                 .keyboardType(.emailAddress)
-                                .autocapitalization(.none)
+                                .autocapitalization(.none).placeholder(when: lastname.isEmpty) {
+                                    Text("Last Name").foregroundColor(.gray)
+                                }
                             
                             TextField("Course Of Study", text: $courseofstudy)
                                 .keyboardType(.emailAddress)
-                                .autocapitalization(.none)
+                                .autocapitalization(.none).placeholder(when: courseofstudy.isEmpty) {
+                                    Text("Course Of Study").foregroundColor(.gray)
+                                }
                         }
-                        SecureField("Password", text:$password)
+                        SecureField("Password", text:$password).placeholder(when: password.isEmpty) {
+                            Text("Password").foregroundColor(.gray)
+                        }
                         
                     }
                     .padding(12)
