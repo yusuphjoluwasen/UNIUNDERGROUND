@@ -31,6 +31,7 @@ struct CommunitiesLandingPage: View {
     }
 }
 
+
 struct CommunitiesLandingPage_Previews: PreviewProvider {
     static var previews: some View {
         CommunitiesLandingPage().environmentObject(CommunitiesList())
