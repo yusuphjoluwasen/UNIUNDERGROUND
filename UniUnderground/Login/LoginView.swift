@@ -76,13 +76,13 @@ struct LoginView: View {
                         HStack {
                             Spacer()
                             Text(isLoginMode ? "Log In" : "Create Account")
-                                .foregroundColor(Color.blackColor)
+                                .foregroundColor(Color.whiteColor)
                                 .padding(.vertical, 10)
                                 .font(.custom("Inter-SemiBold", size: 17))
                             Spacer()
                         }
                         .frame(height: 50)
-                        .background(Color.whiteColor)
+                        .background(Color.blackColor)
                         .cornerRadius(10)
                     }
                     .padding(.top)
@@ -134,3 +134,6 @@ extension View {
             }
         }
 }
+
+
+

@@ -42,12 +42,17 @@
 		096AFFC32A0E9B4D009B8A0E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 096AFFC22A0E9B4D009B8A0E /* FirebaseFirestore */; };
 		096AFFC52A0E9B4D009B8A0E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 096AFFC42A0E9B4D009B8A0E /* FirebaseFirestoreSwift */; };
 		096AFFC72A0E9B4D009B8A0E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 096AFFC62A0E9B4D009B8A0E /* FirebaseStorage */; };
+		096AFFC92A0EB448009B8A0E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AFFC82A0EB448009B8A0E /* SearchBar.swift */; };
 		B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */; };
 		B97A05CA2A0D210100A82B1F /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C92A0D210100A82B1F /* Community.swift */; };
 		B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */; };
 		B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */; };
 		E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2EE2A0C33990007B9BB /* HomeTab.swift */; };
 		E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */; };
+		E48AA2F92A0D70780007B9BB /* Confession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F82A0D70780007B9BB /* Confession.swift */; };
+		E48AA2FD2A0E6AEA0007B9BB /* EventsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */; };
+		E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA3002A0E70410007B9BB /* AddEventView.swift */; };
+		E4EAC49C2A0EA45200B7E0A6 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EAC49B2A0EA45200B7E0A6 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,12 +104,17 @@
 		092FBD0E2A0E11EB000A31EE /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
 		096AFFB22A0E673A009B8A0E /* CommunitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewModel.swift; sourceTree = "<group>"; };
 		096AFFB52A0E95FD009B8A0E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		096AFFC82A0EB448009B8A0E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesHome.swift; sourceTree = "<group>"; };
 		B97A05C92A0D210100A82B1F /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesDetailView.swift; sourceTree = "<group>"; };
 		B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommunityView.swift; sourceTree = "<group>"; };
 		E48AA2EE2A0C33990007B9BB /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
 		E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsPage.swift; sourceTree = "<group>"; };
+		E48AA2F82A0D70780007B9BB /* Confession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confession.swift; sourceTree = "<group>"; };
+		E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPage.swift; sourceTree = "<group>"; };
+		E48AA3002A0E70410007B9BB /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		E4EAC49B2A0EA45200B7E0A6 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +211,7 @@
 				092FBD062A0E03A4000A31EE /* Profile */,
 				092FBD012A0DE3E1000A31EE /* GoogleService-Info.plist */,
 				B97A05C72A0D200E00A82B1F /* Communites */,
+				E48AA2FB2A0E6AC20007B9BB /* EventsPage */,
 				E48AA2EC2A0C32F00007B9BB /* ConfessionsPage */,
 				0912611C2A0C044C007095F2 /* SelectSchool */,
 				091261192A0C0383007095F2 /* Font */,
@@ -299,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */,
+				E48AA2F82A0D70780007B9BB /* Confession.swift */,
 			);
 			path = ConfessionsPage;
 			sourceTree = "<group>";
@@ -309,6 +321,17 @@
 				E48AA2EE2A0C33990007B9BB /* HomeTab.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E48AA2FB2A0E6AC20007B9BB /* EventsPage */ = {
+			isa = PBXGroup;
+			children = (
+				E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */,
+				E48AA3002A0E70410007B9BB /* AddEventView.swift */,
+				E4EAC49B2A0EA45200B7E0A6 /* Events.swift */,
+				096AFFC82A0EB448009B8A0E /* SearchBar.swift */,
+			);
+			path = EventsPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,13 +489,18 @@
 				B97A05CA2A0D210100A82B1F /* Community.swift in Sources */,
 				096AFFB62A0E95FD009B8A0E /* ImagePicker.swift in Sources */,
 				B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */,
+				E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */,
+				E48AA2FD2A0E6AEA0007B9BB /* EventsPage.swift in Sources */,
 				E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
 				092FBD0D2A0E11D2000A31EE /* AppStateView.swift in Sources */,
 				092FBD002A0DDFAF000A31EE /* SchoolViewModel.swift in Sources */,
 				092FBCFE2A0DCCB2000A31EE /* LoginViewModel.swift in Sources */,
+				E48AA2F92A0D70780007B9BB /* Confession.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */,
+				E4EAC49C2A0EA45200B7E0A6 /* Events.swift in Sources */,
+				096AFFC92A0EB448009B8A0E /* SearchBar.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
 				092FBD0A2A0E03D3000A31EE /* ProfileView.swift in Sources */,
 				092FBD0F2A0E11EB000A31EE /* AppStateViewModel.swift in Sources */,

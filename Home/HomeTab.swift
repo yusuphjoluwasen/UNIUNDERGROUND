@@ -10,10 +10,11 @@ import SwiftUI
 struct HomeTab: View {
     var body: some View {
         TabView {
-            Text("hello")
+            
+            ConfessionsPage()
                 .tabItem {
-                    Image(systemName: "car")
-                    Text("Motion")
+                    Image(systemName: "eyes.inverse")
+                    Text("Confessions")
                 }
             
             CommunitiesHome()
@@ -21,24 +22,27 @@ struct HomeTab: View {
                     Image(systemName: "car")
                     Text("Motion")
                 }
-            
+                    
             Text("hello")
-                .tabItem {
-                    Image(systemName: "car")
-                    Text("Motion")
-                }
-            
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "flag.fill")
-                    Text("Profile")
-                }
+                        .tabItem {
+                            Image(systemName: "calendar")
+                            Text("Events")
+                        }
+                    
+                    
+                    ProfileView()
+                        .tabItem {
+                            Image(systemName: "flag.fill")
+                            Text("Profile")
+                            Image(systemName: "person.3.fill")
+                            Text("Community")
+                        }
         }
     }
 }
-
-struct HomeTab_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeTab()
+    
+    struct HomeTab_Previews: PreviewProvider {
+        static var previews: some View {
+            HomeTab()
+        }
     }
-}
