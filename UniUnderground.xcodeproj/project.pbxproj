@@ -37,6 +37,10 @@
 		E48AA2F52A0D6E060007B9BB /* ConfessionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F42A0D6E060007B9BB /* ConfessionsList.swift */; };
 		E48AA2F72A0D70060007B9BB /* ConfessionsComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F62A0D70060007B9BB /* ConfessionsComments.swift */; };
 		E48AA2F92A0D70780007B9BB /* ConfessionsCommentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2F82A0D70780007B9BB /* ConfessionsCommentClass.swift */; };
+		E48AA2FD2A0E6AEA0007B9BB /* EventsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */; };
+		E48AA2FF2A0E6F210007B9BB /* SerachBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2FE2A0E6F210007B9BB /* SerachBar.swift */; };
+		E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA3002A0E70410007B9BB /* AddEventView.swift */; };
+		E4EAC49C2A0EA45200B7E0A6 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EAC49B2A0EA45200B7E0A6 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		E48AA2F42A0D6E060007B9BB /* ConfessionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsList.swift; sourceTree = "<group>"; };
 		E48AA2F62A0D70060007B9BB /* ConfessionsComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsComments.swift; sourceTree = "<group>"; };
 		E48AA2F82A0D70780007B9BB /* ConfessionsCommentClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionsCommentClass.swift; sourceTree = "<group>"; };
+		E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPage.swift; sourceTree = "<group>"; };
+		E48AA2FE2A0E6F210007B9BB /* SerachBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachBar.swift; sourceTree = "<group>"; };
+		E48AA3002A0E70410007B9BB /* AddEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		E4EAC49B2A0EA45200B7E0A6 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +180,7 @@
 		09185D1C2A0B3E700034280A /* UniUnderground */ = {
 			isa = PBXGroup;
 			children = (
+				E48AA2FB2A0E6AC20007B9BB /* EventsPage */,
 				E48AA2EC2A0C32F00007B9BB /* ConfessionsPage */,
 				0912611C2A0C044C007095F2 /* SelectSchool */,
 				091261192A0C0383007095F2 /* Font */,
@@ -228,6 +237,17 @@
 				E48AA2EE2A0C33990007B9BB /* HomeTab.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		E48AA2FB2A0E6AC20007B9BB /* EventsPage */ = {
+			isa = PBXGroup;
+			children = (
+				E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */,
+				E48AA2FE2A0E6F210007B9BB /* SerachBar.swift */,
+				E48AA3002A0E70410007B9BB /* AddEventView.swift */,
+				E4EAC49B2A0EA45200B7E0A6 /* Events.swift */,
+			);
+			path = EventsPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,14 +400,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E48AA2F52A0D6E060007B9BB /* ConfessionsList.swift in Sources */,
+				E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */,
+				E48AA2FD2A0E6AEA0007B9BB /* EventsPage.swift in Sources */,
 				E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */,
 				E48AA2F72A0D70060007B9BB /* ConfessionsComments.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
 				E48AA2F92A0D70780007B9BB /* ConfessionsCommentClass.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */,
+				E4EAC49C2A0EA45200B7E0A6 /* Events.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
 				E48AA2F32A0D60830007B9BB /* ConfessionClass.swift in Sources */,
+				E48AA2FF2A0E6F210007B9BB /* SerachBar.swift in Sources */,
 				09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */,
 				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
 			);

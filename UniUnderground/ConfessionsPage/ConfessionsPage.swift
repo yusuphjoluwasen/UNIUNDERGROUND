@@ -15,7 +15,7 @@ struct ConfessionsPage: View {
     @State var searchUniversity: String = ""
     @EnvironmentObject var confessionsList: ConfessionsCommentsList
     @State private var newComment: String = ""
-    let filterOptions = ["All", "University of Westminster", "University of Warwick", "University of Oxford", "Royal Holloway Unviersity"]
+    let filterOptions = ["All", "University of Westminster", "University of Warwick", "University of Oxford", "Royal Holloway Unviersity", ""]
     
     var body: some View {
             VStack(alignment: .leading) {
