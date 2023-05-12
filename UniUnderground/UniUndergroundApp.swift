@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct UniUndergroundApp: App {
+    
+    @StateObject var communitiesList = CommunitiesList()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CommunitiesLandingPage().environmentObject(communitiesList)
         }
     }
 }
