@@ -31,13 +31,21 @@
 		09185D5E2A0BE00C0034280A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D5D2A0BE00C0034280A /* FirebaseFirestore */; };
 		09185D602A0BE00C0034280A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D5F2A0BE00C0034280A /* FirebaseFirestoreSwift */; };
 		09185D622A0BE00C0034280A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 09185D612A0BE00C0034280A /* FirebaseStorage */; };
+		092FBCFC2A0DCC74000A31EE /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBCFB2A0DCC74000A31EE /* FirebaseManager.swift */; };
+		092FBCFE2A0DCCB2000A31EE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBCFD2A0DCCB2000A31EE /* LoginViewModel.swift */; };
+		092FBD002A0DDFAF000A31EE /* SchoolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBCFF2A0DDFAF000A31EE /* SchoolViewModel.swift */; };
+		092FBD022A0DE3E1000A31EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 092FBD012A0DE3E1000A31EE /* GoogleService-Info.plist */; };
+		092FBD052A0DFC13000A31EE /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBD042A0DFC13000A31EE /* ColorExtension.swift */; };
+		092FBD082A0E03C6000A31EE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBD072A0E03C6000A31EE /* ProfileViewModel.swift */; };
+		092FBD0A2A0E03D3000A31EE /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBD092A0E03D3000A31EE /* ProfileView.swift */; };
+		092FBD0D2A0E11D2000A31EE /* AppStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBD0C2A0E11D2000A31EE /* AppStateView.swift */; };
+		092FBD0F2A0E11EB000A31EE /* AppStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092FBD0E2A0E11EB000A31EE /* AppStateViewModel.swift */; };
 		B97A05C42A0C38D900A82B1F /* CommunitiesLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C32A0C38D900A82B1F /* CommunitiesLandingPage.swift */; };
 		B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */; };
 		B97A05CA2A0D210100A82B1F /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C92A0D210100A82B1F /* Communities.swift */; };
 		B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */; };
 		B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */; };
 		B97A05D12A0D33E500A82B1F /* CommunitiesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05D02A0D33E500A82B1F /* CommunitiesList.swift */; };
-		B97A05D52A0D69FD00A82B1F /* CommunitiesComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05D42A0D69FD00A82B1F /* CommunitiesComment.swift */; };
 		B97A05D72A0D6A4D00A82B1F /* CommunitiesCommentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05D62A0D6A4D00A82B1F /* CommunitiesCommentList.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +87,15 @@
 		09185D382A0B3E710034280A /* UniUndergroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundUITests.swift; sourceTree = "<group>"; };
 		09185D3A2A0B3E710034280A /* UniUndergroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniUndergroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		09185D632A0BE5CB0034280A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		092FBCFB2A0DCC74000A31EE /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		092FBCFD2A0DCCB2000A31EE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		092FBCFF2A0DDFAF000A31EE /* SchoolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolViewModel.swift; sourceTree = "<group>"; };
+		092FBD012A0DE3E1000A31EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		092FBD042A0DFC13000A31EE /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		092FBD072A0E03C6000A31EE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		092FBD092A0E03D3000A31EE /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		092FBD0C2A0E11D2000A31EE /* AppStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateView.swift; sourceTree = "<group>"; };
+		092FBD0E2A0E11EB000A31EE /* AppStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateViewModel.swift; sourceTree = "<group>"; };
 		B97A05C32A0C38D900A82B1F /* CommunitiesLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesLandingPage.swift; sourceTree = "<group>"; };
 		B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesHome.swift; sourceTree = "<group>"; };
 		B97A05C92A0D210100A82B1F /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
@@ -86,7 +103,6 @@
 		B97A05CD2A0D27F200A82B1F /* AddCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommunityView.swift; sourceTree = "<group>"; };
 		B97A05CF2A0D332800A82B1F /* Community.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Community.geojson; sourceTree = "<group>"; };
 		B97A05D02A0D33E500A82B1F /* CommunitiesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesList.swift; sourceTree = "<group>"; };
-		B97A05D42A0D69FD00A82B1F /* CommunitiesComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesComment.swift; sourceTree = "<group>"; };
 		B97A05D62A0D6A4D00A82B1F /* CommunitiesCommentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesCommentList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				091261172A0BE8CA007095F2 /* LoginView.swift */,
+				092FBCFD2A0DCCB2000A31EE /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -149,6 +166,7 @@
 			children = (
 				0912611D2A0C0466007095F2 /* SelectSchools.swift */,
 				091261292A0C1DB0007095F2 /* NewIView.swift */,
+				092FBCFF2A0DDFAF000A31EE /* SchoolViewModel.swift */,
 			);
 			path = SelectSchool;
 			sourceTree = "<group>";
@@ -176,6 +194,9 @@
 		09185D1C2A0B3E700034280A /* UniUnderground */ = {
 			isa = PBXGroup;
 			children = (
+				092FBD0B2A0E11B8000A31EE /* AppManager */,
+				092FBD062A0E03A4000A31EE /* Profile */,
+				092FBD012A0DE3E1000A31EE /* GoogleService-Info.plist */,
 				B97A05C72A0D200E00A82B1F /* Communites */,
 				0912611C2A0C044C007095F2 /* SelectSchool */,
 				091261192A0C0383007095F2 /* Font */,
@@ -185,6 +206,7 @@
 				09185D1F2A0B3E700034280A /* ContentView.swift */,
 				09185D212A0B3E710034280A /* Assets.xcassets */,
 				09185D232A0B3E710034280A /* Preview Content */,
+				092FBD042A0DFC13000A31EE /* ColorExtension.swift */,
 			);
 			path = UniUnderground;
 			sourceTree = "<group>";
@@ -214,6 +236,25 @@
 			path = UniUndergroundUITests;
 			sourceTree = "<group>";
 		};
+		092FBD062A0E03A4000A31EE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				092FBD072A0E03C6000A31EE /* ProfileViewModel.swift */,
+				092FBD092A0E03D3000A31EE /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		092FBD0B2A0E11B8000A31EE /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				092FBCFB2A0DCC74000A31EE /* FirebaseManager.swift */,
+				092FBD0C2A0E11D2000A31EE /* AppStateView.swift */,
+				092FBD0E2A0E11EB000A31EE /* AppStateViewModel.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
 		B97A05C22A0C38A300A82B1F /* Communities View Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +281,6 @@
 				B97A05CF2A0D332800A82B1F /* Community.geojson */,
 				B97A05C92A0D210100A82B1F /* Communities.swift */,
 				B97A05D02A0D33E500A82B1F /* CommunitiesList.swift */,
-				B97A05D42A0D69FD00A82B1F /* CommunitiesComment.swift */,
 				B97A05D62A0D6A4D00A82B1F /* CommunitiesCommentList.swift */,
 			);
 			path = Model;
@@ -365,6 +405,7 @@
 			files = (
 				091261262A0C088B007095F2 /* Inter-SemiBold.ttf in Resources */,
 				09185D252A0B3E710034280A /* Preview Assets.xcassets in Resources */,
+				092FBD022A0DE3E1000A31EE /* GoogleService-Info.plist in Resources */,
 				091261252A0C088B007095F2 /* Inter-Regular.ttf in Resources */,
 				091261272A0C088B007095F2 /* Inter-Bold.ttf in Resources */,
 				091261282A0C088B007095F2 /* Inter-Medium.ttf in Resources */,
@@ -395,16 +436,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				092FBCFC2A0DCC74000A31EE /* FirebaseManager.swift in Sources */,
 				B97A05D72A0D6A4D00A82B1F /* CommunitiesCommentList.swift in Sources */,
 				B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */,
 				B97A05CA2A0D210100A82B1F /* Communities.swift in Sources */,
 				B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
+				092FBD0D2A0E11D2000A31EE /* AppStateView.swift in Sources */,
+				092FBD002A0DDFAF000A31EE /* SchoolViewModel.swift in Sources */,
+				092FBCFE2A0DCCB2000A31EE /* LoginViewModel.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				09185D202A0B3E700034280A /* ContentView.swift in Sources */,
+				092FBD0A2A0E03D3000A31EE /* ProfileView.swift in Sources */,
+				092FBD0F2A0E11EB000A31EE /* AppStateViewModel.swift in Sources */,
 				09185D1E2A0B3E700034280A /* UniUndergroundApp.swift in Sources */,
-				B97A05D52A0D69FD00A82B1F /* CommunitiesComment.swift in Sources */,
+				092FBD052A0DFC13000A31EE /* ColorExtension.swift in Sources */,
 				B97A05C42A0C38D900A82B1F /* CommunitiesLandingPage.swift in Sources */,
+				092FBD082A0E03C6000A31EE /* ProfileViewModel.swift in Sources */,
 				B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */,
 				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
 				B97A05D12A0D33E500A82B1F /* CommunitiesList.swift in Sources */,

@@ -9,3 +9,7 @@ import Foundation
 struct CommentList: Codable {
     var comments: [Comment]
 }
+
+struct Comment:Codable{
+    
+}

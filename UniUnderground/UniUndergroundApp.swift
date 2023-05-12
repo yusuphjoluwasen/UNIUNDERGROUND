@@ -10,11 +10,15 @@ import SwiftUI
 @main
 struct UniUndergroundApp: App {
     
-    @StateObject var communitiesList = CommunitiesList()
+    @StateObject var userStateViewModel = AppStateViewModel()
     
     var body: some Scene {
         WindowGroup {
-            CommunitiesLandingPage().environmentObject(communitiesList)
+            AppStateView()
+                .environmentObject(userStateViewModel)
         }
     }
 }
+
+
+

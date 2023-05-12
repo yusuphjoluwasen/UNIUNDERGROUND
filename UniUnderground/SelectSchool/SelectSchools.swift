@@ -10,39 +10,46 @@ import AVFoundation
 
 struct SelectSchool: View {
     let synthesizer = AVSpeechSynthesizer()
-        
-//        private func readOut(text: String) {
-//            let utterance = AVSpeechUtterance(string: text)
-//            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-//
-//            synth.speak(utterance)
-//        }
-
+    @ObservedObject var viewModel:SchoolViewModel = SchoolViewModel()
+    
     var body: some View {
         NavigationStack {
             VStack{
-                Button {
-                    speak()
-                } label: {
-                    Text("sjsjjjs")
-                }
-
+                Text("Select Your School")
+                    .font(.custom("Kavoon-Regular", size: 32))
+                
+                Divider()
+                
                 List {
-                    ForEach(schools(), id: \.self) { word in
+                    ForEach(viewModel.schools) { school in
                         NavigationLink {
-                            NewIView()
-                               
+                            LoginView(school: school)
+
                         } label: {
-                            Text(word)
+                            HStack{
+                                AsyncImage(url: URL(string: school.logo)) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFill()
+                                } placeholder: {
+                                    Color.gray.opacity(0.1)
+                                }
+                                .frame(width: 40, height: 40)
+                                .cornerRadius(20)
+
+                                Text(school.name)
+
+                            }
                         }
                     }
+                    
+                   
                 }
-                .navigationTitle(  Text("Select Your School")
-                    .font(.custom("Kavoon-Regular", size: 32))
-                )
+                .listStyle(.inset)
             }
+            
             .onAppear{
-               
+               // speak()
             }
         }
     }
