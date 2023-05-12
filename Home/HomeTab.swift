@@ -13,7 +13,7 @@ struct HomeTab: View {
            
             ConfessionsPage()
                 .tabItem {
-                    Image(systemName: "captions.bubble.fill")
+                    Image(systemName: "eyes.inverse")
                     Text("Confessions")
                 }
             Text("hello")
@@ -23,7 +23,7 @@ struct HomeTab: View {
                 }
             Text("hello")
                 .tabItem {
-                    Image(systemName: "car")
+                    Image(systemName: "calendar")
                     Text("Events")
                 }
             Text("hello")
