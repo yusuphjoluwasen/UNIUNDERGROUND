@@ -19,24 +19,35 @@ struct ConfessionsPage: View {
         VStack {
             ScrollView{
                 Text("Confessions 🤫")
-                    .font(.title)
-                    .bold()
-                    .padding(.leading)
+                            .font(.largeTitle)
+                            .bold()
+                            .frame(width: 350, alignment: .leading)
+                            //.padding(.trailing)
+                
+                Rectangle()
+                    .fill(Color.secondary)
+                    .opacity(0.4)
+                    .frame(maxWidth: .infinity, maxHeight: 1)
+                    .padding(.bottom)
                 
                 Button(action: { showFilter = true }) {
-                    Image(systemName: "slider.horizontal.3")
+                    Image(systemName: "line.3.horizontal")
+                        .resizable()
+                        .frame(width: 31, height: 15)
                         .foregroundColor(.primary)
+                        .padding(.bottom)
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                
                 
                 VStack{
                     ForEach(confessionList()){ confession in
                         VStack{
                             Text(confession.text)
+                                .font(.custom("InriaSerif-Regular", size: 16))
                             HStack{
                                 Spacer()
-                                Text(confession.school)
+                                Text(" ~ \(confession.school)")
+                                    .font(.custom("InriaSerif-Regular", size: 9))
                             }
                         }
                     }
@@ -44,15 +55,20 @@ struct ConfessionsPage: View {
             }
             
             HStack {
-                TextField(" Type your confession", text: $newComment)
-                    .cornerRadius(20)
-                    .frame(width: 300, height: 40 ,alignment: .center)
-                    .border(Color.secondary)
-                    .padding(.horizontal)
-                
+                VStack {
+                    TextField("Type your confession", text: $newComment)
+                        .font(.custom("InriaSerif-Regular", size: 16))
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .frame(height: 500)
+                }
+                .frame(height: 20)
+
                 Button(action: {
-                  //  confessionsList.addComment(comment: newComment)
-                   // newComment = ""
+                    let confession = Confession(text: newComment, school: "")
+                    var confessions = confessionList()
+                    confessions.append(confession)
+                    UserDefaults.standard.set(try? PropertyListEncoder().encode(confessions), forKey: "confessions")
+                    newComment = ""
                 }) {
                     ZStack{
                         Rectangle()
@@ -72,9 +88,10 @@ struct ConfessionsPage: View {
                 Text("Select a University")
                 TextField("Search a University", text: $searchUniversity)
                     .cornerRadius(20)
-                    .frame(width: 400, height: 40 ,alignment: .center)
+                    .frame(width: 354, height: 44 ,alignment: .center)
                     .border(Color.secondary)
                     .padding(.horizontal)
+                
 //                ForEach(filterOptions, id: \.self) { option in
 //                    Button(action: {
 //                        selectedFilter = option
@@ -94,7 +111,7 @@ struct ConfessionsPage: View {
 //                        }
 //                        .padding(.vertical, 10)
 //                    }
-                }
+            }
             }
     }
     

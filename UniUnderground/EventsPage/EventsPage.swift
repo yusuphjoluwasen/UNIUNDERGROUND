@@ -12,25 +12,23 @@ struct EventsPage: View {
     @State private var events = [
         Event(name: "Event 1", description: "Description 1", location: "Location 1", dateTime: "DateTime 1", website: "Website 1"),
         Event(name: "Event 2", description: "Description 2", location: "Location 2", dateTime: "DateTime 2", website: "Website 2"),
-        Event(name: "Event 3", description: "Description 3", location: "Location 3", dateTime: "DateTime 3", website: "Website 3"),
-        Event(name: "Event 4", description: "Description 4", location: "Location 4", dateTime: "DateTime 4", website: "Website 4"),
-        Event(name: "Event 5", description: "Description 5", location: "Location 5", dateTime: "DateTime 5", website: "Website 5")
+        Event(name: "Event 3", description: "Description 3", location: "Location 3", dateTime: "DateTime 3", website: "Website 3")
     ]
 
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Events 🧜🏽‍♀️")
-                    .font(.title)
+                Text("Socials 🧜🏽‍♀️")
+                    .font(.largeTitle)
                     .bold()
                     .padding(.leading)
                 
-                Rectangle()
-                    .frame(width: 300, height: 1, alignment: .center)
-                    .foregroundColor(.gray)
-
                 EventSearchBar(text: $searchText)
-                    .padding(.horizontal)
+                
+                Rectangle()
+                    .fill(Color.secondary)
+                    .opacity(0.4)
+                    .frame(maxWidth: .infinity, maxHeight: 1)
 
                 List(events.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { event in
                     VStack(alignment: .leading) {
@@ -38,32 +36,47 @@ struct EventsPage: View {
                             .font(.headline)
                         Text(event.description)
                             .font(.subheadline)
-                        Text(event.location)
-                            .font(.subheadline)
-                        Text(event.dateTime)
-                            .font(.subheadline)
-                        Text(event.website)
-                            .font(.subheadline)
+                        HStack{
+                            Text("📆\(event.location)")
+                                .font(.subheadline)
+                                .bold()
+                            Spacer()
+                            Text(event.dateTime)
+                                .font(.subheadline)
+                        }
                     }
                 }
-
+                .listStyle(PlainListStyle())
+                .background(Color.clear)
+                .padding(.trailing)
+                
                 Spacer()
+                HStack{
+                    Spacer()
+                    NavigationLink(destination: AddEventView(onSave: { name, description, location, dateTime, website in
+                        let newEvent = Event(name: name, description: description, location: location, dateTime: dateTime, website: website)
+                        events.append(newEvent)
+                    })) {
+                        ZStack{
+                            Circle()
+                                .fill(Color.blackColor)
+                                .frame(width: 70, height: 70)
+                            Image(systemName: "plus")
+                                .font(.system(size: 18))
+                                .foregroundColor(.whiteColor)
+                                .padding(.leading, 1)
+                        }.padding(.horizontal)
+                            
 
-                NavigationLink(destination: AddEventView(onSave: { name, description, location, dateTime, website in
-                    let newEvent = Event(name: name, description: description, location: location, dateTime: dateTime, website: website)
-                    events.append(newEvent)
-                })) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.system(size: 44))
-                        .foregroundColor(.blue)
-                        .padding(.leading)
+                    }
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
         }
     }
 }
+
 
 extension String: Identifiable {
     public var id: String { self }
