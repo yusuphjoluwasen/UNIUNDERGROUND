@@ -17,10 +17,23 @@ struct AddCommunityView: View {
     
     var body: some View {
         ScrollView{
+            VStack(alignment: .leading){
+                Text("Add a Society")
+                    .font(.custom("Inter-Bold", size: 32))
+                    .padding(.horizontal)
+                    .padding(.vertical, 10)
+                
+                Divider()
+                    .padding(.horizontal)
+            }
+            
+            
             VStack{
                 Button(action: {
                     shouldShowImagePicker.toggle()
                 }){
+                    
+                    
                     VStack{
                         if let image = self.image {
                             Image(uiImage: image)
@@ -29,28 +42,67 @@ struct AddCommunityView: View {
                                 .frame(width: 128, height: 128)
                                 .cornerRadius(64)
                         } else {
-                            Image(systemName: "person.fill")
-                                .resizable()
-                                .frame(width: 60, height: 60)
+                            ZStack{
+                                Rectangle()
+                                    .fill(Color.blackColor)
+                                    .frame( width: 100, height:100)
+                                    .cornerRadius(50)
+                                Image(systemName: "person.fill")
+                                    .resizable()
+                                    .foregroundColor(.whiteColor)
+                                    .frame(width: 55, height: 55)
+                            }
                         }
                     }
+                    
                 }
                 .padding(.vertical)
+                
+                Text("Add a logo")
+                    .font(.custom("InriaSerif-Regular", size: 16))
+                    .padding()
             
-                TextField("Community Name", text: $name)
-                    .border(Color.black)
-               
-                TextField("Brief description of the group", text: $description)
-                    .border(Color.black)
+                VStack{
+                    TextField("Title", text: $name)
+                        //.padding()
+                        .font(.custom("InriaSerif-Regular", size: 16))
+//                        .background(Color.white)
+//                        .foregroundColor(Color.black)
+//                        .cornerRadius(10)
+                    
+                        //.frame(height: 40)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+
+                    TextField("Description", text: $description)
+                        
+                        .font(.custom("InriaSerif-Regular", size: 16))
+                        .cornerRadius(20)
+                        .frame(height: 92.0)
+                        //.textFieldStyle(RoundedBorderTextFieldStyle())
+                        
+                        .border(Color.black)
+
+                    //.border(Color.black)
+                    
+                    
                 
                 Button(action: {
                     viewModel.createCommunity(image: image ?? UIImage(), name: name, description: description)
                     
                 }){
-                    Text("Create Community")
+                    HStack{
+                        Text("Create".uppercased())
+                            .padding()
+                            .frame(maxWidth: .infinity, maxHeight: 45)
+                            .font(.custom("Inter", size: 16))
+                            .foregroundColor(Color(.white))
+                            .background(Color.black.cornerRadius(10))
+                    }
+                    //.padding(.horizontal)
                 }
                 .disabled(name.isEmpty || description.isEmpty)
-                
+                }
+
                 Text(status)
                     .padding(.top)
             }
