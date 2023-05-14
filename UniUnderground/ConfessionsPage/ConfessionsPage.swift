@@ -18,17 +18,18 @@ struct ConfessionsPage: View {
     var body: some View {
         VStack {
             ScrollView{
-                Text("Confessions 🤫")
-                            .font(.largeTitle)
-                            .bold()
-                            .frame(width: 350, alignment: .leading)
-                            //.padding(.trailing)
-                
-                Rectangle()
-                    .fill(Color.secondary)
-                    .opacity(0.4)
-                    .frame(maxWidth: .infinity, maxHeight: 1)
-                    .padding(.bottom)
+                    Text("Confessions 🤫")
+                        .font(.largeTitle)
+                        .bold()
+                        .frame(width: 344, height: 41, alignment: .leading)
+                    
+                    Rectangle()
+                        .fill(Color.secondary)
+                        .opacity(0.4)
+                        .frame(maxWidth: .infinity, maxHeight: 1)
+                        .padding(.bottom)
+                        
+                      
                 
                 Button(action: { showFilter = true }) {
                     Image(systemName: "line.3.horizontal")
@@ -39,6 +40,7 @@ struct ConfessionsPage: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
+                
                 VStack{
                     ForEach(confessionList()){ confession in
                         VStack{
@@ -46,8 +48,9 @@ struct ConfessionsPage: View {
                                 .font(.custom("InriaSerif-Regular", size: 16))
                             HStack{
                                 Spacer()
-                                Text(" ~ \(confession.school)")
+                                Text("\(confession.school)")
                                     .font(.custom("InriaSerif-Regular", size: 9))
+                                    .foregroundColor(Color.gray)
                             }
                         }
                     }
@@ -57,9 +60,13 @@ struct ConfessionsPage: View {
             HStack {
                 VStack {
                     TextField("Type your confession", text: $newComment)
+                        .padding(10)
                         .font(.custom("InriaSerif-Regular", size: 16))
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .frame(height: 500)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.secondary, lineWidth: 0.5)
+                        ) .frame(width: 290, height: 45)
+                       
                 }
                 .frame(height: 20)
 
@@ -73,7 +80,7 @@ struct ConfessionsPage: View {
                     ZStack{
                         Rectangle()
                             .fill(Color.blackColor)
-                            .frame(width: 44, height: 44)
+                            .frame(width: 40, height: 40)
                             .cornerRadius(14)
                         Image(systemName: "paperplane.fill")
                             .foregroundColor(Color.whiteColor)
@@ -82,15 +89,34 @@ struct ConfessionsPage: View {
             }
         }
         .padding(.horizontal)
-        .onAppear{}
-        .popover(isPresented: $showFilter, arrowEdge: .bottom) {
+        .sheet(isPresented: $showFilter){
+           
             VStack {
-                Text("Select a University")
-                TextField("Search a University", text: $searchUniversity)
-                    .cornerRadius(20)
+                Text("Select a school")
+                    .padding(.trailing, 200)
+                    .padding(.top)
+                    .bold()
+                    .font(.custom("Inter-Regular", size: 20))
+                    .foregroundColor(Color.blackColor)
+                
+                TextField("Search your School", text: $searchUniversity)
+                    .foregroundColor(.blackColor)
+                    .font(.custom("InriaSerif-Regular", size: 16))
+                    .padding()
                     .frame(width: 354, height: 44 ,alignment: .center)
-                    .border(Color.secondary)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.secondary, lineWidth: 1)
+                    )
+                    .cornerRadius(10)
                     .padding(.horizontal)
+                
+                Spacer()
+            }
+                .presentationDetents([.fraction(0.3), .medium])
+                .presentationDragIndicator(.visible)
+                
+        }
                 
 //                ForEach(filterOptions, id: \.self) { option in
 //                    Button(action: {
@@ -111,9 +137,9 @@ struct ConfessionsPage: View {
 //                        }
 //                        .padding(.vertical, 10)
 //                    }
+                }
             }
-            }
-    }
+    
     
     func confessionList() -> [Confession]{
         return [
@@ -121,8 +147,6 @@ struct ConfessionsPage: View {
             
         ]
     }
-}
-
 
 struct ConfessionsPage_Previews: PreviewProvider {
     static var previews: some View {

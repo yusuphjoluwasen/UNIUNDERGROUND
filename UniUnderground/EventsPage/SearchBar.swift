@@ -14,11 +14,7 @@ struct EventSearchBar: View {
     
     var body: some View {
         HStack {
-            //            TextField("\(searchicon)Search\(micicon)", text: $text)
-            //                .padding(.vertical, 10)
-            //                .padding(.horizontal)
-            //                .background(Color(.systemGray6))
-            //                .cornerRadius(8)
+
             TextField("\(searchicon)Search", text: $text)
                 .padding(.horizontal)
                 .frame(height: 40)

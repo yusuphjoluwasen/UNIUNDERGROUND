@@ -23,33 +23,38 @@ struct AddEventView: View {
             Text("Add a Social Event")
                 .font(.custom("Inter-Bold", size: 32))
                 .padding(.trailing, 50)
+                .frame(width: 344, height: 41, alignment: .leading)
         
             Rectangle()
                 .fill(Color.secondary)
                 .opacity(0.4)
-                .frame(width: 360, height: 1)
+                .frame(maxWidth: .infinity, maxHeight: 1)
                 .padding(.bottom)
-        
 
             TextField("Title", text: $eventName)
                 .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 359, height: 45)
             
             TextField("Description", text: $eventDescription)
                 .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                
             
             TextField("Location", text: $eventLocation)
                 .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 359, height: 45)
             
             TextField("Date", text: $eventDateTime)
                 .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 359, height: 45)
             
             TextField("Link", text: $eventWebsite)
                 .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 359, height: 45)
             
             ZStack {
                             Rectangle()

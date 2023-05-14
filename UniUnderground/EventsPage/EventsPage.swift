@@ -21,7 +21,8 @@ struct EventsPage: View {
                 Text("Socials 🧜🏽‍♀️")
                     .font(.largeTitle)
                     .bold()
-                    .padding(.leading)
+                    .padding(.leading, 20)
+                    .frame(width: 344, height: 41, alignment: .leading)
                 
                 EventSearchBar(text: $searchText)
                 
