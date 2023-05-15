@@ -106,10 +106,13 @@ struct ProfileView: View {
     }
     
     func signOut(){
+        
         shouldShowLogOutOptions = true
+        
     }
     
     func handleSignOut(){
+        self.profileData = Data()
         viewModel.handleSignOut()
         vm.signOut()
     }

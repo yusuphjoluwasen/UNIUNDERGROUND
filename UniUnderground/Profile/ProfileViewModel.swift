@@ -33,6 +33,7 @@ final class ProfileViewModel: ObservableObject {
     }
     
     func handleSignOut() {
+        
         try? FirebaseManager.shared.auth.signOut()
     }
     
