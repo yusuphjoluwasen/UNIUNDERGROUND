@@ -49,7 +49,7 @@ struct CommunitiesDetailView: View {
                                         Text(chat.userfirstname)
                                             .font(.custom("InriaSerif-Regular", size: 9))
                                         Spacer()
-                                        Text("2023-03-12")
+                                        Text(chat.time.time)
                                             .font(.custom("InriaSerif-Regular", size: 9))
                                     }
                                     HStack{
@@ -164,4 +164,5 @@ enum BubblePosition {
     case left
     case right
 }
+
 

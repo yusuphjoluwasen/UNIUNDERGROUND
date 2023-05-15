@@ -30,18 +30,31 @@ struct PAMessageView: View {
                     }
                 }
             }
-            
+           
             HStack{
-                TextField("Message....", text: $viewModel.message, axis: .vertical)
-                    .textFieldStyle(.roundedBorder)
+                TextField("Type your message", text: $viewModel.message)
+                    .padding(10)
+                    .font(.custom("InriaSerif-Regular", size: 16))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.secondary, lineWidth: 0.5)
+                    ) .frame(width: 290, height: 45)
                 if viewModel.isWaitingForResponse{
                     ProgressView()
                         .padding()
                 }else{
-                    Button("Send") {
+                    Button {
                         sendMessage()
+                    } label: {
+                        ZStack{
+                            Rectangle()
+                                .fill(Color.blackColor)
+                                .frame(width: 40, height: 40)
+                                .cornerRadius(14)
+                            Image(systemName: "paperplane.fill")
+                                .foregroundColor(Color.whiteColor)
+                        }
                     }
-                    .buttonStyle(.borderedProminent)
                 }
             }
         }

@@ -45,22 +45,27 @@ struct ConfessionsPage: View {
                 
                 
                 VStack{
-                    ForEach(confessionslist){ confession in
-                        VStack{
-                            HStack{
-                                Text(confession.text)
-                                    .font(.custom("InriaSerif-Regular", size: 16))
-                                Spacer()
+                    if confessionslist.isEmpty{
+                        Text("No Confessions")
+                        
+                    }else{
+                        ForEach(confessionslist){ confession in
+                            VStack{
+                                HStack{
+                                    Text(confession.text)
+                                        .font(.custom("InriaSerif-Regular", size: 16))
+                                    Spacer()
+                                }
+                                HStack{
+                                    Spacer()
+                                    Text("\(confession.school)")
+                                        .font(.custom("InriaSerif-Regular", size: 9))
+                                        .foregroundColor(Color.gray)
+                                }
+                                .padding(.top, 1)
                             }
-                            HStack{
-                                Spacer()
-                                Text("\(confession.school)")
-                                    .font(.custom("InriaSerif-Regular", size: 9))
-                                    .foregroundColor(Color.gray)
-                            }
-                            .padding(.top, 1)
+                            .padding(.bottom, 5)
                         }
-                        .padding(.bottom, 5)
                     }
                 }
             }

@@ -41,6 +41,7 @@ struct PersonalAssistantView: View {
                 }
             }
             .navigationTitle("Personal Assistant")
+            .navigationBarTitle("")
             .onAppear{
                 speak()
             }

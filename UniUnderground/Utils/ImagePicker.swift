@@ -51,3 +51,15 @@ struct ImagePicker: UIViewControllerRepresentable {
 func getScreenSize() -> CGSize{
     return UIScreen.main.bounds.size
 }
+
+func openApp(url:String){
+    let appHook = url
+    let appUrl = URL(string: appHook)!
+    if UIApplication.shared.canOpenURL(appUrl)
+    {
+        UIApplication.shared.open(appUrl)
+    } else {
+        //redirect to safari because the user doesn't have app
+        UIApplication.shared.open(URL(string: url)!)
+    }
+}

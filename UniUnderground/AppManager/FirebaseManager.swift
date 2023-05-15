@@ -59,3 +59,11 @@ class FirebaseManager: NSObject {
     }
     
 }
+
+
+extension Timestamp{
+    var time:String{
+        return self.dateValue().formatted(.dateTime)
+    }
+}
+

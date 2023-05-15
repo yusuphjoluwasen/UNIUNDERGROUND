@@ -49,19 +49,31 @@ struct LoginView: View {
                                 Text("Email").foregroundColor(.gray)
                             }
                         if !isLoginMode{
-                            TextField("First Name", text: $firstname)
+                            TextField("", text: $firstname)
                                 .keyboardType(.emailAddress)
                                 .autocapitalization(.none)
+                                .placeholder(when: firstname.isEmpty) {
+                                    Text("First Name").foregroundColor(.gray)
+                                }
                             
-                            TextField("Last Name", text: $lastname)
+                            TextField("", text: $lastname)
                                 .keyboardType(.emailAddress)
                                 .autocapitalization(.none)
+                                .placeholder(when: lastname.isEmpty) {
+                                    Text("Last Name").foregroundColor(.gray)
+                                }
                             
-                            TextField("Course Of Study", text: $courseofstudy)
+                            TextField("", text: $courseofstudy)
                                 .keyboardType(.emailAddress)
                                 .autocapitalization(.none)
+                                .placeholder(when: courseofstudy.isEmpty) {
+                                    Text("Course Of Study").foregroundColor(.gray)
+                                }
                         }
-                        SecureField("Password", text:$password)
+                        SecureField("", text:$password)
+                            .placeholder(when: password.isEmpty) {
+                                Text("Password").foregroundColor(.gray)
+                            }
                         
                     }
                     .padding(12)
@@ -88,11 +100,22 @@ struct LoginView: View {
                     .padding(.top)
                     .disabled(!valid)
                     
+                    Button {
+                        openApp(url: "https://www.facebook.com/privacy/policy/")
+                    } label: {
+                        Text("Privacy Policy")
+                            .foregroundColor(Color.blackColor)
+                            .font(.custom("Inter-Medium", size: 12))
+                    }
+                    
                     Text(viewModel.loginStatusMessage)
                         .foregroundColor(.red)
                 }
 //
                 .padding()
+                
+                
+
                 
             }
             .navigationTitle(isLoginMode ? "Log In" : "Create Account")

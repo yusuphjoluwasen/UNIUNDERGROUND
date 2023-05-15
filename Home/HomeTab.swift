@@ -23,8 +23,8 @@ struct HomeTab: View {
             
             CommunitiesHome()
                 .tabItem {
-                    Image(systemName: "car")
-                    Text("Motion")
+                    Image(systemName: "person.3.fill")
+                    Text("Community")
                 }
                     
             EventsPage()
@@ -36,9 +36,9 @@ struct HomeTab: View {
                     
                     ProfileView()
                         .tabItem {
-                            Image(systemName: "flag.fill")
+                            Image(systemName: "person.fill")
                             Text("Profile")
-                            Image(systemName: "person.3.fill")
+                            Image(systemName: "person.fill")
                             Text("Community")
                         }
         }
