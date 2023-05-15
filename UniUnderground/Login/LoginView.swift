@@ -20,7 +20,7 @@ struct LoginView: View {
     @EnvironmentObject var vm: AppStateViewModel
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ScrollView{
                 VStack(spacing: 16){
                     Picker(selection: $isLoginMode, label: Text("Picker here")) { Text("Login")
@@ -96,6 +96,8 @@ struct LoginView: View {
                 
             }
             .navigationTitle(isLoginMode ? "Log In" : "Create Account")
+            .navigationBarTitleDisplayMode(.large)
+            .navigationBarTitle("")
             .background(Color(.init(white: 0, alpha: 0.05)))
             .onChange(of: viewModel.loginStatus) { value in
                 if value{

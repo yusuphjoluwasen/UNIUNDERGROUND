@@ -117,7 +117,7 @@ struct ConfessionsPage: View {
                     .font(.custom("Inter-Regular", size: 20))
                     .foregroundColor(Color.blackColor)
                 
-                TextField("Search your School", text: $searchUniversity)
+                TextField("Search your School", text: $viewModel.searchSchoolString)
                     .foregroundColor(.blackColor)
                     .font(.custom("InriaSerif-Regular", size: 16))
                     .padding()

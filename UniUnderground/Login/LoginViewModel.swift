@@ -82,7 +82,7 @@ struct UserProfile:Codable{
     let firstname:String
     let lastname:String
     let email:String
-    let schoolbanner, schoolid, schoollogo, schoolname: String
+    let schoolbanner, schoolid, schoollogo, schoolname, course: String
 }
 
 

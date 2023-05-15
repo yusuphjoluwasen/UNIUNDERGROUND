@@ -40,12 +40,12 @@ struct ProfileView: View {
                     .cornerRadius(40)
                     .padding(.top, -45)
                     
-                    Text("Jimoh Oluwaseun")
+                    Text("\(viewModel.user?.firstname.capitalized ?? "") \(viewModel.user?.lastname.capitalized ?? "")")
                         .font(.custom("Inter-Bold", size: 20))
                     Text(viewModel.user?.email ?? "")
                         .font(.custom("Inter-Medium", size: 13))
                         .padding(.top, 1)
-                    Text("Software Engineering")
+                    Text(viewModel.user?.course.capitalized ?? "")
                         .font(.custom("Inter-Regular", size: 12))
                 }
                 
