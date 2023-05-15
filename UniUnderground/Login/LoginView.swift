@@ -82,14 +82,14 @@ struct LoginView: View {
                             Spacer()
                         }
                         .frame(height: 50)
-                        .background(Color.blackColor)
+                        .background(buttonColor)
                         .cornerRadius(10)
                     }
                     .padding(.top)
+                    .disabled(!valid)
                     
                     Text(viewModel.loginStatusMessage)
                         .foregroundColor(.red)
-                    
                 }
 //
                 .padding()
@@ -112,6 +112,30 @@ struct LoginView: View {
             viewModel.loginUser(email: email, password: password)
         } else {
             viewModel.createNewAccount(email: email, password: password, firstname: firstname, lastname: lastname, course: courseofstudy, school: school!)
+        }
+    }
+    
+    private var valid:Bool{
+        if isLoginMode{
+            if email.isEmpty || password.isEmpty{
+               return false
+            }else{
+                return true
+            }
+        }else{
+            if email.isEmpty || password.isEmpty || firstname.isEmpty || lastname.isEmpty || courseofstudy.isEmpty{
+                return false
+            }else{
+                return true
+            }
+        }
+    }
+    
+    private var buttonColor:Color{
+        if valid{
+            return Color.blackColor
+        }else{
+            return Color.gray
         }
     }
 }

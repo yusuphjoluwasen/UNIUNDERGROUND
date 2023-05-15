@@ -19,39 +19,63 @@ struct AddEventView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            Text("Add an Event")
-                .font(.title)
-                .bold()
-                .padding(.leading)
             
-            TextField("Event Name", text: $eventName)
+            Text("Add a Social Event")
+                .font(.custom("Inter-Bold", size: 32))
+                .padding(.trailing, 50)
+                .frame(width: 344, height: 41, alignment: .leading)
+        
+            Rectangle()
+                .fill(Color.secondary)
+                .opacity(0.4)
+                .frame(maxWidth: .infinity, maxHeight: 1)
+                .padding(.bottom)
+
+            TextField("Title", text: $eventName)
+                .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .frame(width: 359, height: 45)
             
             TextField("Description", text: $eventDescription)
+                .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                
             
             TextField("Location", text: $eventLocation)
+                .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .frame(width: 359, height: 45)
             
-            TextField("Date and Time", text: $eventDateTime)
+            TextField("Date", text: $eventDateTime)
+                .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .frame(width: 359, height: 45)
             
-            TextField("Event Website", text: $eventWebsite)
+            TextField("Link", text: $eventWebsite)
+                .font(.custom("InriaSerif-Regular", size: 16))
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
+                .frame(width: 359, height: 45)
             
-            SaveButton(action: {
-                onSave(eventName, eventDescription, eventLocation, eventDateTime, eventWebsite)
-                self.presentationMode.wrappedValue.dismiss()
-            })
+            ZStack {
+                            Rectangle()
+                                .fill(Color.blackColor)
+                                .frame(width: 350, height: 40)
+                                .cornerRadius(8)
+                            Button(action: {
+                                onSave(eventName, eventDescription, eventLocation, eventDateTime, eventWebsite)
+                                self.presentationMode.wrappedValue.dismiss()
+                            }) {
+                                Text("CREATE")
+                                    .font(.headline)
+                                    .foregroundColor(.whiteColor)
+                                    .frame(maxWidth: .infinity)
+                            }
+                        }
+                        .padding()
+                        
             
             Spacer()
-        }
+        }.padding(.horizontal)
     }
 }
 

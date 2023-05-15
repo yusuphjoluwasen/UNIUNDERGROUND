@@ -60,6 +60,7 @@
 		E48AA2FD2A0E6AEA0007B9BB /* EventsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA2FC2A0E6AEA0007B9BB /* EventsPage.swift */; };
 		E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48AA3002A0E70410007B9BB /* AddEventView.swift */; };
 		E4EAC49C2A0EA45200B7E0A6 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EAC49B2A0EA45200B7E0A6 /* Events.swift */; };
+		E4EAC4D82A114CBC00B7E0A6 /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = E4EAC4D72A114CBC00B7E0A6 /* HalfASheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 				096AFFC12A0E9B4D009B8A0E /* FirebaseCrashlytics in Frameworks */,
 				096AFFC52A0E9B4D009B8A0E /* FirebaseFirestoreSwift in Frameworks */,
 				096AFFBD2A0E9B4D009B8A0E /* FirebaseAppDistribution-Beta in Frameworks */,
+				E4EAC4D82A114CBC00B7E0A6 /* HalfASheet in Frameworks */,
 				096AFFC72A0E9B4D009B8A0E /* FirebaseStorage in Frameworks */,
 				096AFFBF2A0E9B4D009B8A0E /* FirebaseAuth in Frameworks */,
 				0979CE502A10E95F00C6EA0C /* ChatGPTSwift in Frameworks */,
@@ -388,6 +390,7 @@
 				096AFFC62A0E9B4D009B8A0E /* FirebaseStorage */,
 				0979CE462A10D18100C6EA0C /* Lottie */,
 				0979CE4F2A10E95F00C6EA0C /* ChatGPTSwift */,
+				E4EAC4D72A114CBC00B7E0A6 /* HalfASheet */,
 			);
 			productName = UniUnderground;
 			productReference = 09185D1A2A0B3E700034280A /* UniUnderground.app */;
@@ -465,6 +468,7 @@
 				096AFFB72A0E9B4D009B8A0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0979CE452A10D18100C6EA0C /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				0979CE4E2A10E95F00C6EA0C /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+				E4EAC4D62A114CBC00B7E0A6 /* XCRemoteSwiftPackageReference "HalfASheet" */,
 			);
 			productRefGroup = 09185D1B2A0B3E700034280A /* Products */;
 			projectDirPath = "";
@@ -900,6 +904,14 @@
 				version = 1.3.3;
 			};
 		};
+		E4EAC4D62A114CBC00B7E0A6 /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -952,6 +964,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0979CE4E2A10E95F00C6EA0C /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
 			productName = ChatGPTSwift;
+		};
+		E4EAC4D72A114CBC00B7E0A6 /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4EAC4D62A114CBC00B7E0A6 /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

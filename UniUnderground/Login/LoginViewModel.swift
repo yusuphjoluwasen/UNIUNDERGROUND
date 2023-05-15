@@ -14,16 +14,22 @@ final class LoginViewModel: ObservableObject {
     @Published var loginStatus = false
     
     func loginUser(email:String, password:String) {
+        //validation
+        if email.isEmpty || password.isEmpty{
+            self.loginStatusMessage = "email or password cannot be empty"
+            return
+        }
+        
         FirebaseManager.shared.auth.signIn(withEmail: email.lowercased(), password: password) { result, err in
             if let err = err {
                 print("Failed to login user:", err)
-                self.loginStatusMessage = "Failed to login user: \(err)"
+                self.loginStatusMessage = "Failed to login user"
                 return
             }
             
             print("Successfully logged in as user: \(result?.user.uid ?? "")")
             
-            self.loginStatusMessage = "Successfully logged in as user: \(result?.user.uid ?? "")"
+            self.loginStatusMessage = "Successfully"
             self.loginStatus = true
         }
     }
