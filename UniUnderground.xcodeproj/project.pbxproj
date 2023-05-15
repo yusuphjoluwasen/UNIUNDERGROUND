@@ -43,6 +43,13 @@
 		096AFFC52A0E9B4D009B8A0E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 096AFFC42A0E9B4D009B8A0E /* FirebaseFirestoreSwift */; };
 		096AFFC72A0E9B4D009B8A0E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 096AFFC62A0E9B4D009B8A0E /* FirebaseStorage */; };
 		096AFFC92A0EB448009B8A0E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AFFC82A0EB448009B8A0E /* SearchBar.swift */; };
+		0979CE442A10CEE600C6EA0C /* PersonalAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE432A10CEE600C6EA0C /* PersonalAssistantView.swift */; };
+		0979CE472A10D18100C6EA0C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0979CE462A10D18100C6EA0C /* Lottie */; };
+		0979CE492A10D1F700C6EA0C /* 76890-robot-assistant.json in Resources */ = {isa = PBXBuildFile; fileRef = 0979CE482A10D1F600C6EA0C /* 76890-robot-assistant.json */; };
+		0979CE4B2A10D27C00C6EA0C /* LottieSwiftProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE4A2A10D27C00C6EA0C /* LottieSwiftProcessor.swift */; };
+		0979CE4D2A10E6B600C6EA0C /* PAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE4C2A10E6B600C6EA0C /* PAViewModel.swift */; };
+		0979CE502A10E95F00C6EA0C /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0979CE4F2A10E95F00C6EA0C /* ChatGPTSwift */; };
+		0979CE542A10EBA200C6EA0C /* PAMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE532A10EBA200C6EA0C /* PAMessageView.swift */; };
 		B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */; };
 		B97A05CA2A0D210100A82B1F /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C92A0D210100A82B1F /* Community.swift */; };
 		B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */; };
@@ -105,6 +112,11 @@
 		096AFFB22A0E673A009B8A0E /* CommunitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewModel.swift; sourceTree = "<group>"; };
 		096AFFB52A0E95FD009B8A0E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		096AFFC82A0EB448009B8A0E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		0979CE432A10CEE600C6EA0C /* PersonalAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAssistantView.swift; sourceTree = "<group>"; };
+		0979CE482A10D1F600C6EA0C /* 76890-robot-assistant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "76890-robot-assistant.json"; sourceTree = "<group>"; };
+		0979CE4A2A10D27C00C6EA0C /* LottieSwiftProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSwiftProcessor.swift; sourceTree = "<group>"; };
+		0979CE4C2A10E6B600C6EA0C /* PAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAViewModel.swift; sourceTree = "<group>"; };
+		0979CE532A10EBA200C6EA0C /* PAMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMessageView.swift; sourceTree = "<group>"; };
 		B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesHome.swift; sourceTree = "<group>"; };
 		B97A05C92A0D210100A82B1F /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesDetailView.swift; sourceTree = "<group>"; };
@@ -124,11 +136,13 @@
 			files = (
 				096AFFBB2A0E9B4D009B8A0E /* FirebaseAnalyticsSwift in Frameworks */,
 				096AFFB92A0E9B4D009B8A0E /* FirebaseAnalytics in Frameworks */,
+				0979CE472A10D18100C6EA0C /* Lottie in Frameworks */,
 				096AFFC12A0E9B4D009B8A0E /* FirebaseCrashlytics in Frameworks */,
 				096AFFC52A0E9B4D009B8A0E /* FirebaseFirestoreSwift in Frameworks */,
 				096AFFBD2A0E9B4D009B8A0E /* FirebaseAppDistribution-Beta in Frameworks */,
 				096AFFC72A0E9B4D009B8A0E /* FirebaseStorage in Frameworks */,
 				096AFFBF2A0E9B4D009B8A0E /* FirebaseAuth in Frameworks */,
+				0979CE502A10E95F00C6EA0C /* ChatGPTSwift in Frameworks */,
 				096AFFC32A0E9B4D009B8A0E /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +220,7 @@
 		09185D1C2A0B3E700034280A /* UniUnderground */ = {
 			isa = PBXGroup;
 			children = (
+				0979CE482A10D1F600C6EA0C /* 76890-robot-assistant.json */,
 				096AFFB42A0E95E3009B8A0E /* Utils */,
 				092FBD0B2A0E11B8000A31EE /* AppManager */,
 				092FBD062A0E03A4000A31EE /* Profile */,
@@ -254,6 +269,7 @@
 		092FBD062A0E03A4000A31EE /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0979CE422A10CECD00C6EA0C /* PA */,
 				092FBD072A0E03C6000A31EE /* ProfileViewModel.swift */,
 				092FBD092A0E03D3000A31EE /* ProfileView.swift */,
 			);
@@ -276,6 +292,17 @@
 				096AFFB52A0E95FD009B8A0E /* ImagePicker.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		0979CE422A10CECD00C6EA0C /* PA */ = {
+			isa = PBXGroup;
+			children = (
+				0979CE432A10CEE600C6EA0C /* PersonalAssistantView.swift */,
+				0979CE4A2A10D27C00C6EA0C /* LottieSwiftProcessor.swift */,
+				0979CE4C2A10E6B600C6EA0C /* PAViewModel.swift */,
+				0979CE532A10EBA200C6EA0C /* PAMessageView.swift */,
+			);
+			path = PA;
 			sourceTree = "<group>";
 		};
 		B97A05C22A0C38A300A82B1F /* Communities View Page */ = {
@@ -359,6 +386,8 @@
 				096AFFC22A0E9B4D009B8A0E /* FirebaseFirestore */,
 				096AFFC42A0E9B4D009B8A0E /* FirebaseFirestoreSwift */,
 				096AFFC62A0E9B4D009B8A0E /* FirebaseStorage */,
+				0979CE462A10D18100C6EA0C /* Lottie */,
+				0979CE4F2A10E95F00C6EA0C /* ChatGPTSwift */,
 			);
 			productName = UniUnderground;
 			productReference = 09185D1A2A0B3E700034280A /* UniUnderground.app */;
@@ -434,6 +463,8 @@
 			mainGroup = 09185D112A0B3E700034280A;
 			packageReferences = (
 				096AFFB72A0E9B4D009B8A0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0979CE452A10D18100C6EA0C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				0979CE4E2A10E95F00C6EA0C /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
 			);
 			productRefGroup = 09185D1B2A0B3E700034280A /* Products */;
 			projectDirPath = "";
@@ -453,6 +484,7 @@
 			files = (
 				091261262A0C088B007095F2 /* Inter-SemiBold.ttf in Resources */,
 				09185D252A0B3E710034280A /* Preview Assets.xcassets in Resources */,
+				0979CE492A10D1F700C6EA0C /* 76890-robot-assistant.json in Resources */,
 				092FBD022A0DE3E1000A31EE /* GoogleService-Info.plist in Resources */,
 				091261252A0C088B007095F2 /* Inter-Regular.ttf in Resources */,
 				091261272A0C088B007095F2 /* Inter-Bold.ttf in Resources */,
@@ -488,13 +520,16 @@
 				B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */,
 				B97A05CA2A0D210100A82B1F /* Community.swift in Sources */,
 				096AFFB62A0E95FD009B8A0E /* ImagePicker.swift in Sources */,
+				0979CE4D2A10E6B600C6EA0C /* PAViewModel.swift in Sources */,
 				B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */,
 				E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */,
+				0979CE542A10EBA200C6EA0C /* PAMessageView.swift in Sources */,
 				E48AA2FD2A0E6AEA0007B9BB /* EventsPage.swift in Sources */,
 				E48AA2EF2A0C33990007B9BB /* HomeTab.swift in Sources */,
 				091261182A0BE8CA007095F2 /* LoginView.swift in Sources */,
 				092FBD0D2A0E11D2000A31EE /* AppStateView.swift in Sources */,
 				092FBD002A0DDFAF000A31EE /* SchoolViewModel.swift in Sources */,
+				0979CE4B2A10D27C00C6EA0C /* LottieSwiftProcessor.swift in Sources */,
 				092FBCFE2A0DCCB2000A31EE /* LoginViewModel.swift in Sources */,
 				E48AA2F92A0D70780007B9BB /* Confession.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
@@ -509,6 +544,7 @@
 				092FBD082A0E03C6000A31EE /* ProfileViewModel.swift in Sources */,
 				096AFFB32A0E673A009B8A0E /* CommunitiesViewModel.swift in Sources */,
 				B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */,
+				0979CE442A10CEE600C6EA0C /* PersonalAssistantView.swift in Sources */,
 				0912612A2A0C1DB0007095F2 /* NewIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -610,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = ColorAccent;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -846,6 +884,22 @@
 				version = 9.6.0;
 			};
 		};
+		0979CE452A10D18100C6EA0C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = exactVersion;
+				version = 4.2.0;
+			};
+		};
+		0979CE4E2A10E95F00C6EA0C /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 1.3.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -888,6 +942,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 096AFFB72A0E9B4D009B8A0E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		0979CE462A10D18100C6EA0C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0979CE452A10D18100C6EA0C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		0979CE4F2A10E95F00C6EA0C /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0979CE4E2A10E95F00C6EA0C /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

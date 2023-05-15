@@ -46,3 +46,8 @@ struct ImagePicker: UIViewControllerRepresentable {
     }
     
 }
+
+
+func getScreenSize() -> CGSize{
+    return UIScreen.main.bounds.size
+}

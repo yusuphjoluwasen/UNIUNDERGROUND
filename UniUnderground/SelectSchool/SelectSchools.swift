@@ -6,10 +6,8 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 struct SelectSchool: View {
-    let synthesizer = AVSpeechSynthesizer()
     @ObservedObject var viewModel:SchoolViewModel = SchoolViewModel()
     
     var body: some View {
@@ -56,13 +54,6 @@ struct SelectSchool: View {
     
     func schools() -> Array<String>{
         return  ["University Of Westminster", "University of Oxford", "BirbeckUniversity, London", "University of Glasgow"]
-    }
-    
-    func speak(){
-        let utterance = AVSpeechUtterance(string: "Hey Ifeoma, How can i help you?")
-      //  utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-       
-        synthesizer.speak(utterance)
     }
 }
 

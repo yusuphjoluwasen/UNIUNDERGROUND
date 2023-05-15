@@ -14,7 +14,7 @@ struct UniUndergroundApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AppStateView()
+            ContentView()
                 .environmentObject(userStateViewModel)
         }
     }
