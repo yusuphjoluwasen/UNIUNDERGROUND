@@ -6,13 +6,23 @@
 //
 
 import Foundation
+import Firebase
 
-struct Event: Identifiable {
-    var id = UUID()
-    var name: String
-    var description: String
-    var location: String
-    var dateTime: String
-    var website: String
+struct Event: Identifiable, Codable {
+    let id:String?
+    let name: String
+    let description: String
+    let location: String
+    let dateTime: String
+    let time: Timestamp
+    let url: String
+}
+
+struct CreateSocialEvent {
+    let name: String
+    let description: String
+    let location: String
+    let dateTime: String
+    let url: String
 }
 

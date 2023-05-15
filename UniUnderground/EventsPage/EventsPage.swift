@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct EventsPage: View {
-    @State private var searchText = ""
-    @State private var events = [
-        Event(name: "Event 1", description: "Description 1", location: "Location 1", dateTime: "DateTime 1", website: "Website 1"),
-        Event(name: "Event 2", description: "Description 2", location: "Location 2", dateTime: "DateTime 2", website: "Website 2"),
-        Event(name: "Event 3", description: "Description 3", location: "Location 3", dateTime: "DateTime 3", website: "Website 3")
-    ]
+    @ObservedObject var viewModel:EventsViewModel = EventsViewModel()
 
     var body: some View {
         NavigationView {
@@ -24,14 +19,14 @@ struct EventsPage: View {
                     .padding(.leading, 20)
                     .frame(width: 344, height: 41, alignment: .leading)
                 
-                EventSearchBar(text: $searchText)
+                EventSearchBar(text: $viewModel.searchString)
                 
                 Rectangle()
                     .fill(Color.secondary)
                     .opacity(0.4)
                     .frame(maxWidth: .infinity, maxHeight: 1)
 
-                List(events.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { event in
+                List(viewModel.filteredEvents) { event in
                     VStack(alignment: .leading) {
                         Text(event.name)
                             .font(.headline)
@@ -45,6 +40,7 @@ struct EventsPage: View {
                             Text(event.dateTime)
                                 .font(.subheadline)
                         }
+                        .padding(.top, 2)
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -54,10 +50,7 @@ struct EventsPage: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    NavigationLink(destination: AddEventView(onSave: { name, description, location, dateTime, website in
-                        let newEvent = Event(name: name, description: description, location: location, dateTime: dateTime, website: website)
-                        events.append(newEvent)
-                    })) {
+                    NavigationLink(destination: AddEventView()) {
                         ZStack{
                             Circle()
                                 .fill(Color.blackColor)
@@ -73,6 +66,12 @@ struct EventsPage: View {
                 }
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
+            }
+            .onAppear{
+                viewModel.fetchEvents()
+            }
+            .onChange(of: viewModel.searchString) { newValue in
+                viewModel.searchEvent()
             }
         }
     }

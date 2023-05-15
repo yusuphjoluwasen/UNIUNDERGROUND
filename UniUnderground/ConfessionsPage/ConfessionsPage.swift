@@ -9,27 +9,30 @@ import SwiftUI
 
 struct ConfessionsPage: View {
     @AppStorage("confession") var confession: String = ""
+    @ObservedObject var viewModel:ConfessionsViewModel = ConfessionsViewModel()
     @State var selectedFilter = "All"
     @State var showFilter = false
     @State var searchUniversity: String = ""
+    @State var confessionslist: [Confession] = []
     @State private var newComment: String = ""
-    let filterOptions = ["All", "University of Westminster", "University of Warwick", "University of Oxford", "Royal Holloway Unviersity", ""]
+    @AppStorage("profile")
+    private var profileData:Data = Data()
     
     var body: some View {
         VStack {
             ScrollView{
-                    Text("Confessions 🤫")
-                        .font(.largeTitle)
-                        .bold()
-                        .frame(width: 344, height: 41, alignment: .leading)
-                    
-                    Rectangle()
-                        .fill(Color.secondary)
-                        .opacity(0.4)
-                        .frame(maxWidth: .infinity, maxHeight: 1)
-                        .padding(.bottom)
-                        
-                      
+                Text("Confessions 🤫")
+                    .font(.largeTitle)
+                    .bold()
+                    .frame(width: 344, height: 41, alignment: .leading)
+                
+                Rectangle()
+                    .fill(Color.secondary)
+                    .opacity(0.4)
+                    .frame(maxWidth: .infinity, maxHeight: 1)
+                    .padding(.bottom)
+                
+                
                 
                 Button(action: { showFilter = true }) {
                     Image(systemName: "line.3.horizontal")
@@ -42,17 +45,22 @@ struct ConfessionsPage: View {
                 
                 
                 VStack{
-                    ForEach(confessionList()){ confession in
+                    ForEach(confessionslist){ confession in
                         VStack{
-                            Text(confession.text)
-                                .font(.custom("InriaSerif-Regular", size: 16))
+                            HStack{
+                                Text(confession.text)
+                                    .font(.custom("InriaSerif-Regular", size: 16))
+                                Spacer()
+                            }
                             HStack{
                                 Spacer()
                                 Text("\(confession.school)")
                                     .font(.custom("InriaSerif-Regular", size: 9))
                                     .foregroundColor(Color.gray)
                             }
+                            .padding(.top, 1)
                         }
+                        .padding(.bottom, 5)
                     }
                 }
             }
@@ -66,16 +74,12 @@ struct ConfessionsPage: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.secondary, lineWidth: 0.5)
                         ) .frame(width: 290, height: 45)
-                       
+                    
                 }
                 .frame(height: 20)
-
+                
                 Button(action: {
-                    let confession = Confession(text: newComment, school: "")
-                    var confessions = confessionList()
-                    confessions.append(confession)
-                    UserDefaults.standard.set(try? PropertyListEncoder().encode(confessions), forKey: "confessions")
-                    newComment = ""
+                    addMessage()
                 }) {
                     ZStack{
                         Rectangle()
@@ -89,8 +93,22 @@ struct ConfessionsPage: View {
             }
         }
         .padding(.horizontal)
+        .onAppear{
+            viewModel.fetchConfessions()
+            viewModel.fetchSchools()
+        }
+        .onChange(of: selectedFilter, perform: { newValue in
+            viewModel.changeSearchString(searchString: selectedFilter)
+           confessionslist = viewModel.filterConfession()
+        })
+        .onChange(of: viewModel.confessions, perform: { newValue in
+            confessionslist = viewModel.confessions
+        })
+        .onChange(of: viewModel.searchSchoolString) { newValue in
+            viewModel.searchSchool()
+        }
         .sheet(isPresented: $showFilter){
-           
+            
             VStack {
                 Text("Select a school")
                     .padding(.trailing, 200)
@@ -111,42 +129,46 @@ struct ConfessionsPage: View {
                     .cornerRadius(10)
                     .padding(.horizontal)
                 
+                ForEach(viewModel.filteredschools, id: \.self) { option in
+                    Button(action: {
+                        selectedFilter = option
+                        showFilter = false
+                    }) {
+                        HStack {
+                            Text(option)
+                                .foregroundColor(.primary)
+                                .padding(.leading, 10)
+                            Spacer()
+                            if selectedFilter == option {
+                                Image(systemName: "checkmark")
+                                    .foregroundColor(.primary)
+                                    .padding(.trailing, 10)
+                                
+                            }
+                        }
+                        .padding(.vertical, 10)
+                    }
+                }
+                
                 Spacer()
             }
-                .presentationDetents([.fraction(0.3), .medium])
-                .presentationDragIndicator(.visible)
-                
+            .presentationDetents([.fraction(0.5), .medium])
+            .presentationDragIndicator(.visible)
         }
-                
-//                ForEach(filterOptions, id: \.self) { option in
-//                    Button(action: {
-//                        selectedFilter = option
-//                        showFilter = false
-//                    }) {
-//                        HStack {
-//                            Text(option)
-//                                .foregroundColor(.primary)
-//                                .padding(.leading, 10)
-//                            Spacer()
-//                            if selectedFilter == option {
-//                                Image(systemName: "checkmark")
-//                                    .foregroundColor(.primary)
-//                                    .padding(.trailing, 10)
-//
-//                            }
-//                        }
-//                        .padding(.vertical, 10)
-//                    }
-                }
-            }
-    
-    
-    func confessionList() -> [Confession]{
-        return [
-            Confession(text: "I opened it and it was full of nail clippings. I put it back and never said anything. It was the weirdest thing I have ever seen!", school: "university of oxford")
-            
-        ]
     }
+    
+    func addMessage(){
+        guard let profile = try? JSONDecoder().decode(UserProfile.self, from: profileData) else {
+            return
+        }
+        
+        if newComment != ""{
+            viewModel.createConfession(confession: CreateConfession(text: newComment, school: profile.schoolname))
+            newComment = ""
+        }
+    }
+}
+
 
 struct ConfessionsPage_Previews: PreviewProvider {
     static var previews: some View {

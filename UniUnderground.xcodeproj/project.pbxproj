@@ -50,6 +50,8 @@
 		0979CE4D2A10E6B600C6EA0C /* PAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE4C2A10E6B600C6EA0C /* PAViewModel.swift */; };
 		0979CE502A10E95F00C6EA0C /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0979CE4F2A10E95F00C6EA0C /* ChatGPTSwift */; };
 		0979CE542A10EBA200C6EA0C /* PAMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE532A10EBA200C6EA0C /* PAMessageView.swift */; };
+		0979CE562A11E5F900C6EA0C /* ConfessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE552A11E5F900C6EA0C /* ConfessionViewModel.swift */; };
+		0979CE582A11EA2B00C6EA0C /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979CE572A11EA2B00C6EA0C /* EventsViewModel.swift */; };
 		B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */; };
 		B97A05CA2A0D210100A82B1F /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05C92A0D210100A82B1F /* Community.swift */; };
 		B97A05CC2A0D221700A82B1F /* CommunitiesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */; };
@@ -118,6 +120,8 @@
 		0979CE4A2A10D27C00C6EA0C /* LottieSwiftProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieSwiftProcessor.swift; sourceTree = "<group>"; };
 		0979CE4C2A10E6B600C6EA0C /* PAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAViewModel.swift; sourceTree = "<group>"; };
 		0979CE532A10EBA200C6EA0C /* PAMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAMessageView.swift; sourceTree = "<group>"; };
+		0979CE552A11E5F900C6EA0C /* ConfessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfessionViewModel.swift; sourceTree = "<group>"; };
+		0979CE572A11EA2B00C6EA0C /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		B97A05C52A0D1D8E00A82B1F /* CommunitiesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesHome.swift; sourceTree = "<group>"; };
 		B97A05C92A0D210100A82B1F /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		B97A05CB2A0D221700A82B1F /* CommunitiesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesDetailView.swift; sourceTree = "<group>"; };
@@ -340,6 +344,7 @@
 			children = (
 				E48AA2F02A0C33C70007B9BB /* ConfessionsPage.swift */,
 				E48AA2F82A0D70780007B9BB /* Confession.swift */,
+				0979CE552A11E5F900C6EA0C /* ConfessionViewModel.swift */,
 			);
 			path = ConfessionsPage;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				E48AA3002A0E70410007B9BB /* AddEventView.swift */,
 				E4EAC49B2A0EA45200B7E0A6 /* Events.swift */,
 				096AFFC82A0EB448009B8A0E /* SearchBar.swift */,
+				0979CE572A11EA2B00C6EA0C /* EventsViewModel.swift */,
 			);
 			path = EventsPage;
 			sourceTree = "<group>";
@@ -524,6 +530,7 @@
 				B97A05C62A0D1D8E00A82B1F /* CommunitiesHome.swift in Sources */,
 				B97A05CA2A0D210100A82B1F /* Community.swift in Sources */,
 				096AFFB62A0E95FD009B8A0E /* ImagePicker.swift in Sources */,
+				0979CE562A11E5F900C6EA0C /* ConfessionViewModel.swift in Sources */,
 				0979CE4D2A10E6B600C6EA0C /* PAViewModel.swift in Sources */,
 				B97A05CE2A0D27F200A82B1F /* AddCommunityView.swift in Sources */,
 				E48AA3012A0E70420007B9BB /* AddEventView.swift in Sources */,
@@ -536,6 +543,7 @@
 				0979CE4B2A10D27C00C6EA0C /* LottieSwiftProcessor.swift in Sources */,
 				092FBCFE2A0DCCB2000A31EE /* LoginViewModel.swift in Sources */,
 				E48AA2F92A0D70780007B9BB /* Confession.swift in Sources */,
+				0979CE582A11EA2B00C6EA0C /* EventsViewModel.swift in Sources */,
 				0912611E2A0C0466007095F2 /* SelectSchools.swift in Sources */,
 				E48AA2F12A0C33C70007B9BB /* ConfessionsPage.swift in Sources */,
 				E4EAC49C2A0EA45200B7E0A6 /* Events.swift in Sources */,

@@ -10,7 +10,6 @@ import SwiftUI
 struct CommunitiesHome: View {
     @ObservedObject var viewModel:CommunitiesViewModel = CommunitiesViewModel()
     @State private var isPresenting = false
-    @AppStorage ("communitiesSearchText") var communitiesSearchText: String = ""
     @State var micicon = Image(systemName: "magnifyingglass")
     
     
@@ -24,7 +23,7 @@ struct CommunitiesHome: View {
                 
                 
                 //search bar
-                        TextField("\(micicon) Search", text: $communitiesSearchText)
+                TextField("\(micicon) Search", text: $viewModel.searchString)
                             .frame(height: 36)
                             .padding(.horizontal)
                             .background(Color(.systemGray6))
@@ -33,7 +32,7 @@ struct CommunitiesHome: View {
                                 HStack{
                                     Spacer()
                                     Button(action: {
-                                        self.communitiesSearchText = ""
+                                        viewModel.searchString = ""
                                     }) {
                                         Image(systemName: "mic.fill")
                                             .foregroundColor(.gray)
@@ -47,7 +46,7 @@ struct CommunitiesHome: View {
                 Divider()
                     .padding(.vertical, 10)
                 
-                    List(viewModel.communities) { community in
+                    List(viewModel.filteredcommunities) { community in
                         NavigationLink(destination: CommunitiesDetailView(community: community)) {
                             HStack {
                                 AsyncImage(url: URL(string: community.grouplogo)) { image in
@@ -91,6 +90,9 @@ struct CommunitiesHome: View {
             }
             .onAppear{
                 viewModel.fetchCommunities()
+            }
+            .onChange(of: viewModel.searchString) { newValue in
+                viewModel.searchCommunity()
             }
             .navigationDestination(isPresented: $isPresenting, destination: {
                 AddCommunityView()

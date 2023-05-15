@@ -12,6 +12,8 @@ import Firebase
 final class CommunitiesViewModel: ObservableObject {
 
     @Published var communities:[Community] = []
+    @Published var searchString:String = ""
+    @Published var filteredcommunities:[Community] = []
     @Published var messages:[GroupMessage] = []
     @Published var createNewCommunityStatus = false
     var firestoreListener: ListenerRegistration?
@@ -32,8 +34,8 @@ final class CommunitiesViewModel: ObservableObject {
         }
     }
     
-     func addToCommunityMessages(text:String, communityid:String) {
-         let message = GroupMessage(text: text, communityid: communityid, userfirstname: "Kola", userlastname: "Segun", userschool: "West", time: FirebaseManager.shared.getTimeStamp())
+    func addToCommunityMessages(text:String, communityid:String, firstname:String, lastname:String, school:String) {
+         let message = GroupMessage(text: text, communityid: communityid, userfirstname: firstname, userlastname: lastname, userschool: school, time: FirebaseManager.shared.getTimeStamp())
          
          let db = FirebaseManager.shared.firestore.collection("group")
              .document(communityid)
@@ -63,9 +65,11 @@ final class CommunitiesViewModel: ObservableObject {
                 }
                 
                 self?.communities.removeAll()
+                self?.filteredcommunities.removeAll()
                 documentsSnapshot?.documents.forEach({ [weak self] snapshot in
                     let community = try? snapshot.data(as: Community.self)
                     self?.communities.append(community!)
+                    self?.filteredcommunities.append(community!)
                 })
             }
     }
@@ -101,6 +105,16 @@ final class CommunitiesViewModel: ObservableObject {
         FirebaseManager.shared.uploadImage(image: image) { [weak self] imageurl in
             let community = CreateCommunity(groupname: name, grouplogo: imageurl, description: description)
             self?.createCommunity(community: community)
+        }
+    }
+    
+    func searchCommunity(){
+        let newcommunities:[Community] = communities
+        if searchString == ""{
+            filteredcommunities = communities
+        }else{
+            let filtered = newcommunities.filter { community in community.groupname.contains(searchString)}
+            filteredcommunities = filtered
         }
     }
 }

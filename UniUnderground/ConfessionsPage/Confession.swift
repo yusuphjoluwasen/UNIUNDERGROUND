@@ -6,9 +6,18 @@
 //
 
 import Foundation
+import Firebase
 
-struct Confession: Identifiable, Codable{
-    var id:String?
-    var text: String
-    var school:String
+struct Confession: Identifiable, Codable, Equatable{
+    let id:String?
+    let text: String
+    let school:String
+    let time: Timestamp
+    
+    
+}
+
+struct CreateConfession: Codable{
+    let text: String
+    let school: String
 }

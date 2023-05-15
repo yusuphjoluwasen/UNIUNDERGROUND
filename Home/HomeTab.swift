@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeTab: View {
+    @ObservedObject var viewModel:ProfileViewModel = ProfileViewModel()
+    @AppStorage("profile")
+    private var profileData:Data = Data()
+    
     var body: some View {
         TabView {
             
@@ -23,7 +27,7 @@ struct HomeTab: View {
                     Text("Motion")
                 }
                     
-            Text("hello")
+            EventsPage()
                         .tabItem {
                             Image(systemName: "calendar")
                             Text("Events")
@@ -38,6 +42,27 @@ struct HomeTab: View {
                             Text("Community")
                         }
         }
+        .onAppear{
+            loadFromAppStorage()
+        }
+        .onChange(of: viewModel.fetchData, perform: { newValue in
+            if newValue{
+                saveToAppStorage(profile: viewModel.user)
+            }
+        })
+    }
+    
+    func saveToAppStorage(profile:UserProfile?){
+        guard let profileData = try? JSONEncoder().encode(profile) else { return }
+        self.profileData = profileData
+    }
+    
+    func loadFromAppStorage(){
+        guard let profile = try? JSONDecoder().decode(UserProfile.self, from: profileData) else {
+            viewModel.fetchUser()
+            return
+        }
+        viewModel.updateProfile(user: profile)
     }
 }
     

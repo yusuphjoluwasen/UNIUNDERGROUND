@@ -61,61 +61,81 @@ struct AddCommunityView: View {
                 Text("Add a logo")
                     .font(.custom("InriaSerif-Regular", size: 16))
                     .padding()
-            
-                VStack{
-                    TextField("Title", text: $name)
-                        //.padding()
-                        .font(.custom("InriaSerif-Regular", size: 16))
-//                        .background(Color.white)
-//                        .foregroundColor(Color.black)
-//                        .cornerRadius(10)
-                    
-                        //.frame(height: 40)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-
-                    TextField("Description", text: $description)
-                        
-                        .font(.custom("InriaSerif-Regular", size: 16))
-                        .cornerRadius(20)
-                        .frame(height: 92.0)
-                        //.textFieldStyle(RoundedBorderTextFieldStyle())
-                        
-                        .border(Color.black)
-
-                    //.border(Color.black)
-                    
-                    
                 
-                Button(action: {
-                    viewModel.createCommunity(image: image ?? UIImage(), name: name, description: description)
+                VStack{
+                    TextField("", text: $name)
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 5)
+                        .font(.custom("InriaSerif-Regular", size: 16))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.secondary, lineWidth: 0.5)
+                        )
+                        .placeholder(when: name.isEmpty) {
+                            Text(" Title").foregroundColor(.gray)
+                        }
                     
-                }){
-                    HStack{
-                        Text("Create".uppercased())
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: 45)
-                            .font(.custom("Inter", size: 16))
-                            .foregroundColor(Color(.white))
-                            .background(Color.black.cornerRadius(10))
+                    TextField("", text: $description)
+                        .padding(.vertical, 30)
+                        .padding(.horizontal, 5)
+                        .font(.custom("InriaSerif-Regular", size: 16))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.secondary, lineWidth: 0.5)
+                        )
+                        .padding(.top, 10)
+                        .placeholder(when: description.isEmpty) {
+                            Text(" Description").foregroundColor(.gray)
+                        }
+                 
+                    Button(action: {
+                        viewModel.createCommunity(image: image ?? UIImage(), name: name, description: description)
+                        
+                    }){
+                        HStack{
+                            Text("Create".uppercased())
+                                .padding()
+                                .frame(maxWidth: .infinity, maxHeight: 45)
+                                .font(.custom("Inter-SemiBold", size: 17))
+                                .foregroundColor(Color.whiteColor)
+                        }
                     }
-                    //.padding(.horizontal)
+                    .frame(height: 50)
+                    .background(buttonColor)
+                    .cornerRadius(10)
+                    .disabled(!valid)
+                    .padding(.top, 10)
                 }
-                .disabled(name.isEmpty || description.isEmpty)
-                }
-
+                
                 Text(status)
                     .padding(.top)
             }
             .padding(.horizontal)
             .onChange(of: viewModel.createNewCommunityStatus) { value in
                 if value{
-                   status = "Created Successfully"
+                    status = "Created Successfully"
                 }
             }
             .fullScreenCover(isPresented: $shouldShowImagePicker, onDismiss: nil) {
                 ImagePicker(image: $image)
                     .ignoresSafeArea()
             }
+        }
+    }
+    
+    var valid: Bool{
+        if name.isEmpty || description.isEmpty {
+            return false
+        }else{
+            return true
+        }
+    }
+    
+    private var buttonColor:Color{
+        if valid{
+            return Color.blackColor
+        }else{
+            return Color.gray
         }
     }
 }
