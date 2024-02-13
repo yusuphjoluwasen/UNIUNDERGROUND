@@ -20,6 +20,7 @@ manage societies, post events and chat with their friends, the app featured a pe
 <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/l4kfctjoca6otjhrhivl", width="200",height="300" />
 <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/cuai0hcurbs7keysnb3u", width="200", height="355"/>
 <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/mcizznb5qd4r1nybmocd", width="200", height="300"/>
+  <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/qmkrgruqn4trdl2ozi0e", width="200", height="300"/>
 </p>
 
 
