@@ -3,10 +3,10 @@ it is an app for university students in the united kingdom to connect with other
 manage societies, post events and chat with their friends, the app featured a personal AI which can serve as a student personal assistant.
 
 ## Key Features:
-🔹 Post Confessions
-💬 Chat/Messagings Functionalities
-* Personal AI
-📊 Communities
+- 🔹 Post Confessions
+- 💬 Chat/Messagings Functionalities
+-  Personal AI
+- 📊 Communities
 
 ## Technical Skills:
 - 🎨 Swift
