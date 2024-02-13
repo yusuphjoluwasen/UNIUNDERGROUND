@@ -17,11 +17,11 @@ manage societies, post events and chat with their friends, the app featured a pe
 * Open AI
 
 <p>
-<img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/l4kfctjoca6otjhrhivl", width="150",height="200"  style="margin-right: 20" hspace="20" /> 
-<img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/cuai0hcurbs7keysnb3u", width="150", height="200"  hspace="20"/>
-<img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/mcizznb5qd4r1nybmocd", width="150", height="200"  style="margin-right: 20px;"/>
-  <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/qmkrgruqn4trdl2ozi0e", width="150", height="200"  style="margin-right: 20px;"/>
-   <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/hp1jm3ibvvjwysmdd02d", width="150", height="200"  style="margin-right: 20px;"/>
+<img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/l4kfctjoca6otjhrhivl", width="170",height="210"   hspace="10" /> 
+<img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/cuai0hcurbs7keysnb3u", width="170", height="210"  hspace="10"/>
+<img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/mcizznb5qd4r1nybmocd", width="170", height="210"  hspace="10"/>
+  <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/qmkrgruqn4trdl2ozi0e", width="170", height="210"  hspace="10"/>
+   <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/hp1jm3ibvvjwysmdd02d", width="170", height="210"  hspace="10"/>
 </p>
 
 
