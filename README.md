@@ -9,12 +9,12 @@ manage societies, post events and chat with their friends, the app featured a pe
 * Communities
 
 ## Technical Skills:
-* Swift
-* SwiftUI
-* Firebase
-* Combine
-* MVVM with Repository
-* Open AI
+🎨 Swift
+💿 SwiftUI
+🚘 Firebase
+🏦 Combine
+💰 MVVM with Repository
+⏱️ Open AI
 
 <p>
 <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/l4kfctjoca6otjhrhivl", width="170",height="210"   hspace="10" /> 
@@ -23,5 +23,4 @@ manage societies, post events and chat with their friends, the app featured a pe
   <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/qmkrgruqn4trdl2ozi0e", width="170", height="210"  hspace="10"/>
    <img src="https://res.cloudinary.com/university-of-lagos-student/image/upload/f_auto,q_auto/hp1jm3ibvvjwysmdd02d", width="170", height="210"  hspace="10"/>
 </p>
-
 
