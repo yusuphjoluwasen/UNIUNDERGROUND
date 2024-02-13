@@ -1,6 +1,5 @@
 # UniUnderground
-it is an app for university students in the united kingdom to connect with other students, student can share funny anonymous confessions with others, Student Leaders can also
-manage societies, post events and chat with their friends, the app featured a personal AI which can serve as a student personal assistant.
+It is an app for university students in the United Kingdom to connect with others. Students can share amusing anonymous confessions with their peers. Student Leaders can also manage societies, post events, and chat with their friends. The app features a personal AI that serves as a student's personal assistant.
 
 ## Key Features:
 - 🔹 Post Confessions
